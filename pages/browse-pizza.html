@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+.bordered {
+	border-style: solid;
+	border-width: thin;
+	border-color: black;
+}
+.LogoBannerCart {
+	width: 100%;	
+}
+div#LogoBannerCart {
+    display: flex;
+    flex-wrap: nowrap;
+	text-align: center;
+}
+.logo, .cart {
+	width: 25%;
+}
+.banner {
+	width: 50%;
+}
+
+/* body */
+
+#workplace {
+	display: flex;	
+}
+
+#toppings_side {
+	width: 50%;
+}
+.toppings_tab {
+	width: 25%;	
+	border-style: solid;
+}
+#tab-dough {
+	border-bottom-style: none;	
+}
+
+div#tabs {
+    display: flex;
+}
+
+.tab_content {
+	display: none;	
+}
+
+#dough {
+	display: block;	
+}
+
+/* Hover animations */
+.toppings_tab {
+	background: whitesmoke;
+	border-bottom-style: solid;
+}
+.toppings_tab:hover {
+	background: greenyellow;
+	border-bottom-style: none;
+}
+
+
+
+/* end hover animations */
+
+#pizza_side {
+	width: 50%;
+	color: white;	
+	text-align: center;
+	vertical-align: center;
+}
+
+#placeholder_pizza {
+	width: 100px;
+	height: 100px;
+	margin-left: 25%;
+	border-radius: 50px;
+	background: brown;	
+}
+
+span#placeholder_text {
+    margin-top: 25%;
+    font-size: 2em;
+    position: relative;
+    display: inline-block;
+}
+
+/* footer */
+
+div#footer {
+    position: relative;
+    display: flex;
+    text-align: center;
+}
+
+div#footer .logo {
+    width: 100%;
+}
+</style>
+</head>
+	<div id="header">
+    	<div id="LogoBannerCart">
+        	<span class="logo bordered">Logo</span>
+            <span class="banner bordered">Banner</span>
+            <span class="cart bordered">Cart</span>
+        </div>
+        <div id="menubar">
+        	<span>MenuBar</span>
+        </div>
+    </div>
+    <div id="body">
+    	<div id="browse_container">
+        	
+            <div id="tabs">
+            	<div id="tab-menuItems">
+                	<span>Menu Items</span>
+                </div>
+                <div id="tab-customerCreations">
+                	<span>Customer Creations</span>
+                </div>
+            </div>
+            
+            <div id="sortPizzaContainer">
+            	<div id="sortPizza-text">
+                	<span>Sort Pizza</span>
+                </div>
+                <div id="sortPizza-dropdown">
+                	<-! dropdown for category options -->
+                	<span>Select Category</span>
+                </div>
+            </div>
+            
+            <div class="tab_content" id="content-menuItems">
+            	<div class="pizzaDisplayContainer">
+                	<div class="pizzaDisplay-Header">
+                        <div class="pizzaDisplay-name" id="pdn-1">
+                        	<span>PizzaName</span>
+                        </div>
+                        
+                        <div class="pizzaDisplay-rating" id="pdr-1">
+                        	
+                        </div>
+					</div>
+                    
+                    <div class="pizzaDisplay-Body">                  
+                        <div class="pizzaDisplay-pizza" id="pdp-1">
+                        </div>  
+                        <div class="pizzaDisplay-ingredients" id="pdi-1">
+                        </div>
+                        <div class="pizzaDisplay-select" id="pds-1">
+                        </div>
+					</div>                    
+                </div>
+            </div>
+            <div class="tab_content" id="content-customerCreations">
+            </div>
+            
+        </div>
+    </div>
+    <div id="footer">
+		<span class="logo bordered">Logo</span>
+    </div>
+<body>
+</body>
+</html>
