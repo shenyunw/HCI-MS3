@@ -1,0 +1,505 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!--LIBRARIES-->
+    <link rel="stylesheet" type="text/css" href="libraries/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="libraries/textillate-master/assets/animate.css"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <!--download these sites to create local copy-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--<link rel="stylesheet" type="text/css" href="libraries/textillate-master/assets/style.css"/> -->
+
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="libraries/slick/slick.min.js"></script>
+    <script type="text/javascript" src="libraries/textillate-master/jquery.textillate.js"></script>
+    <script type="text/javascript" src="libraries/textillate-master/assets/jquery.lettering.js"></script>
+    <script type="text/javascript" src="libraries/textillate-master/assets/jquery.fittext.js"></script>
+
+
+    <!--END LIBRARIES-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Untitled Document</title>
+    <style type="text/css">
+
+
+        body{
+            background-image: url("images/background.jpg");
+            background-size: cover;
+        }
+
+        #workplace {
+            display: flex;
+        }
+
+        #toppings_side {
+            width: 50%;
+        }
+
+
+        .topping-icon{
+            display: inline;
+            max-height: 1em;
+        }
+
+        .toppings_tab {
+            width: 25%;
+            border-style: solid;
+        }
+
+        #tab-dough {
+            border-bottom-style: none;
+        }
+
+        div#tabs {
+            display: flex;
+        }
+
+        .tab_content {
+            display: none;
+        }
+
+
+        .navbar-brand > img {
+            max-width: 7em;
+            position: absolute;
+            top: -35px;
+            left: 3px;
+        }
+
+        .navbar-nav {
+            padding-left: 8%;
+        }
+
+        #navbar-container {
+            padding-top: 2%;
+            padding-bottom: 2%;
+            color: white;
+            font-size: 3em;
+        }
+        
+        #pizza_side {
+            width: 50%;
+            height: 100%;
+        }
+
+        #placeholder_pizza {
+            border-radius: 50px;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+        }
+
+        .buildImage {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        img#pizza_side-background {
+            height: 321px;
+            width: 328px;
+        }
+
+        
+        .store-menu{
+            background-image: url(images/cuttingboard.png);
+            background-repeat: no-repeat;
+        }
+        
+        /*span#placeholder_text {*/
+            /*margin-top: 25%;*/
+            /*font-size: 2em;*/
+            /*position: relative;*/
+            /*display: inline-block;*/
+        /*}*/
+
+
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin-left:25%;
+            border: none;
+            cursor: pointer;
+            width: 50%;
+
+        }
+
+
+        .contact-info {
+            text-align: center;
+            font-size: 2em;
+            color: white;
+            background-color: #222;
+        }
+
+        .loginbox {
+            width: 300px;
+            margin-left: 30%;
+            background: #ab2f2f;
+            padding: 16px;
+            overflow: hidden;
+        }
+
+        .signupbox{
+            background: #ab2f2f;
+            width: 45%;
+            padding: 16px;
+            margin-left: 25%;
+            margin-bottom: 10%;
+            /* margin-top: 5%; */
+            overflow: hidden;
+            text-align: right;
+        }
+
+
+
+
+    </style>
+
+    <script type="text/javascript">
+
+        // function for change the state of something when a button is clicked
+        function toggleTopping(id) {
+            currentValue = document.getElementById(id).style.visibility;
+            if (!currentValue || currentValue == "hidden") {
+                document.getElementById(id).style.visibility = "visible";
+            } else {
+                document.getElementById(id).style.visibility = "hidden";
+            }
+        }
+
+
+    </script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            //$('#nav-login').slick({vertical: true});
+            $('#site-body').slick({
+                draggable: false,
+                arrows: false,
+                fade: true,
+                speed: 450,
+                infinite: true,
+                cssEase: 'linear'
+            });
+
+
+            $('page-advertisements').slick({draggable: false});
+
+
+            $('#nav-home').on('click', function () {
+
+                $('#site-body').slick('slickGoTo', 0);
+            });
+
+
+            $('#nav-menu').on('click', function () {
+
+                $('#site-body').slick('slickGoTo', 1);
+            });
+
+
+            $('#nav-build').on('click', function () {
+
+                $('#site-body').slick('slickGoTo', 2);
+            });
+
+
+            $('#nav-cart').on('click', function () {
+
+                $('#site-body').slick('slickGoTo', 4);
+            });
+
+
+            $('#cust-login').on('click', function () {
+
+                $('#site-body').slick('slickGoTo', 3);
+            });
+
+
+            $('#emp-login').on('click', function () {
+
+                $('#site-body').slick('slickGoTo', 4);
+            });
+
+            $('#nav-transaction').on('click', function () {
+
+                $('#site-body').slick('slickGoTo', 5);
+            });
+
+            $('#nav-signup').on('click', function() {
+
+                $('#site-body').slick('slickGoTo', 6);
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+
+
+<div class="contact-info"><span class="glyphicon glyphicon-home"></span> 123 Rainbow Road  |  <span class="glyphicon glyphicon-earphone"></span> 555-555-5555</div>
+
+<nav id="navbar-container" class="navbar navbar-default navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><img alt="BYO Pizza" src="Images/logo.jpg"></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li id="nav-home"><a href="#">Home</a></li>
+            <li id="nav-menu"><a href="#">Menu</a></li>
+            <li id="nav-build"><a href="#">Build Pizza</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li id="nav-signup"><a href="#">Sign Up</a></li>
+            <li id="nav-login"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login</a>
+                <ul class="dropdown-menu">
+                    <li id="cust-login"><a href="#">Customer Login</a></li>
+                    <li id="emp-login"><a href="#">Employee Login</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+<div id="site-body">
+
+    <!--HOME PAGE-->
+    <div class="slider" id="page-home">HOME</div>
+
+    <!--BROWSE PAGE-->
+    <div class="slider row" id="page-browse">
+
+        <div class="store-menu-container">
+
+        <div class="store-menu ">
+            <div class="media-left media-middle">
+                <a href="#">
+                    <img class="media-object" src="images/toppings-pizzas-buttons-logo/pepperonipizza.png" alt="pepperoini pizza">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">Pepperoni Pizza</h4>
+                Classic pepperoni pizza, comes standard with:<br>
+                <ul>
+                    <li>Pepperoni</li>
+                    <li>Cheese</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="store-menu">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="images/toppings-pizzas-buttons-logo/meatlover.png" alt="meat lover pizza">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">Meat Lover's Pizza</h4>
+                Pizza for the lover of meats: <br>
+                <ul>
+                    <li>Pepperoni</li>
+                    <li>Sausage</li>
+                    <li>Bacon bits</li>
+                    <li>Cheese</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <!--EMD STORE MENU CONTAINER-->
+
+
+        <!--START CUSTOM MENU CONTAINER-->
+        <div class="custom-menu-container">
+
+
+        </div>
+        <!--END CUSTOM MENU CONTAINER-->
+
+
+    </div>
+    <!--END BROWSE CONTAINER-->
+
+    <!--BUILD PAGE-->
+    <div class="slider" id="page-build">
+       
+        <!-- NEW (RANDAL'S) WORKPLACE -->
+        <div id="workplace">
+            <div id="toppings_side">
+
+                <ul class="nav nav-tabs" id="pizza-topping-tabs">
+                    <li class="active" id="tab-dough">
+                        <a data-toggle="tab" href="#dough">Dough</a>
+                    </li>
+                    <li id="tab-cheese">
+                        <a data-toggle="tab" href="#cheese">Cheese</a>
+                    </li>
+                    <li id="tab-meat">
+                        <a data-toggle="tab" href="#meat">Meat</a>
+                    </li>
+                    <li id="tab-other">
+                        <a data-toggle="tab" href="#other">Other</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="dough" class="tab-pane fade in active">
+                        <br>
+                        Choose your dough:
+                        <br>
+                        <input type="checkbox" value="Crust" onclick="toggleTopping('Crust');"> 
+                        Regular Crust
+                    </div>
+                    <div id="cheese" class="tab-pane fade">
+                        <br>
+                        Choose your cheese:
+                        <br>
+                        <input type="checkbox" value="Cheddar" onclick="toggleTopping('Cheddar');"> Cheddar<br>
+                        <input type="checkbox" value="Mozarella" onclick="toggleTopping('Mozarella');"> Mozarella<br>
+                    </div>
+
+                    <div id="meat" class="tab-pane fade">
+                        <br>
+                        Choose your meats:<br>
+                        <input type="checkbox" value="Pepperoni" onclick="toggleTopping('Pepperoni');">
+                        Pepperoni
+                        <img class="topping-icon" src="images/toppings-pizzas-buttons-logo/topping%20buttons/pepperoni-icon.png" alt="pepperoni.png"/><br>
+
+                        <input type="checkbox" value="Chicken" onclick="toggleTopping('Chicken');">
+                        Chicken
+                        <img class="topping-icon" src="images/toppings-pizzas-buttons-logo/topping%20buttons/chicken-icon.png" alt="chicken.png"/><br>
+
+                        <input type="checkbox" value="Bacon" onclick="toggleTopping('Bacon');">
+                        Bacon
+                        <img class="topping-icon" src="images/toppings-pizzas-buttons-logo/topping%20buttons/baconbits-icon.png" alt="baconbits.png"/><br>
+
+                    </div>
+                    <div id="other" class="tab-pane fade">
+                        <br>
+                        Choose other toppings:
+                        <br>
+                        <input type="checkbox" value="Mushrooms" onclick="toggleTopping('Mushrooms');"> Mushrooms<br>
+                        <input type="checkbox" value="Green Peppers" onclick="toggleTopping('Green Pepper');"> Green Peppers<br>
+                        <input type="checkbox" value="Red Peppers" onclick="toggleTopping('Red Peppers');"> Red Pepers<br>
+                        <input type="checkbox" value="Olives" onclick="toggleTopping('Olives');"> Olives<br>
+                        <input type="checkbox" value="Tomatoes" onclick="toggleTopping('Tomatoes');"> Tomatoes<br>
+                        <input type="checkbox" value="Spinach" onclick="toggleTopping('Spinach');"> Spinach<br>
+                    </div>
+                </div>
+            </div>
+            <div id="pizza_side">
+                <img id="pizza_side-background" src="images/cuttingboard.png" alt="Cuttingboard">
+                <div id="placeholder_pizza">
+                    <img class="buildImage" id="Crust" src="images/toppings-pizzas-buttons-logo/toppings/crust.png">
+                    <img class="buildImage" id="Cheddar"
+                         src="images/toppings-pizzas-buttons-logo/toppings/cheddercheese.png">
+                    <img class="buildImage" id="Mozarella"
+                         src="images/toppings-pizzas-buttons-logo/toppings/mozarella.png">
+                    <img class="buildImage" id="Pepperoni"
+                         src="images/toppings-pizzas-buttons-logo/toppings/pepperoni.png">
+                    <img class="buildImage" id="Chicken"
+                         src="images/toppings-pizzas-buttons-logo/toppings/chickenbits.png">
+                    <img class="buildImage" id="Bacon" src="images/toppings-pizzas-buttons-logo/toppings/baconbits.png">
+                    <img class="buildImage" id="Mushrooms"
+                         src="images/toppings-pizzas-buttons-logo/toppings/mushroom.png">
+                    <img class="buildImage" id="Green Pepper"
+                         src="images/toppings-pizzas-buttons-logo/toppings/green pepper.png">
+                    <img class="buildImage" id="Red Peppers"
+                         src="images/toppings-pizzas-buttons-logo/toppings/red peppers.png">
+                    <img class="buildImage" id="Olives" src="images/toppings-pizzas-buttons-logo/toppings/olives.png">
+                    <img class="buildImage" id="Tomatoes" src="images/toppings-pizzas-buttons-logo/toppings/tomato.png">
+                    <img class="buildImage" id="Spinach" src="images/toppings-pizzas-buttons-logo/toppings/spinach.png">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--CUSTOMER LOG IN PAGE-->
+    <div class="slider" id="page-login">
+
+        <form>
+            <div class="loginbox">
+                <p align="center"><font size="5%" color="white">Login</font></p><br>
+                <label>Username</label>
+                <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+                <label>Password</label>
+                <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+
+                <button type="submit">Login</button>
+
+            </div>
+
+        </form>
+    </div>
+
+    <!--EMPLOYEE LOGIN PAGE-->
+    <div class="slider" id="page-login">
+
+
+        <form>
+
+            <div class="loginbox">
+                <p align="center"><font size="5%" color="white">Employee Login</font></p><br>
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <!--TRANSACTION PAGE-->
+    <div class="slider" id="page-transaction">
+        <p>Transactions</p>
+    </div>
+
+
+    <!--SIGN UP PAGE-->
+    <div class="slider" id = "signup">
+
+        <form>
+            <div class="signupbox">
+                <p align="center"><font size="5%" color="white">Sign Up</font></p><br>
+                <label><b>First Name</b></label>
+                <input type="text" name="firstname" required><br><br>
+                <label><b>Last Name</b></label>
+                <input type="text" name="lastname" required><br><br><br>
+                <label><b>Address</b></label>
+                <input type="text" placeholder="i.e. 55 West Avenue, etc.." name="address" required><br><br>
+                <label><b>Postal Code</b></label>
+                <input type="text" placeholder="i.e. R1R1R1 or R1R 1R1" name="postalCode" required><br><br>
+                <label><b>Phone Number</b></label>
+                <input type="text" placeholder = "(area code)" name="firstname" required><br><br><br>
+                <label><b>Username</b></label>
+                <input type="text" placeholder="6-16 characters" name="firstname" required><br><br>
+                <label><b>Password</b></label>
+                <input type="text" placeholder="8-16 characters" name="firstname" required><br><br>
+
+                <button type="submit">Complete</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+</body>
+</html>
