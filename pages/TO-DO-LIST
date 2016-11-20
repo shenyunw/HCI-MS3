@@ -1,0 +1,23 @@
+BROWSE
+- Rating system
+- add more pizzas
+- link the "select" button to the build + transaction page
+    (when a menu pizza is selected, update the build with preloaded ingredients, also on transaction page too)
+
+- clean up style of browse items (text color, body color)
+
+BUILD
+- add ingredients
+- add icons for the ingredients
+- move the entire container so its not cut off
+
+
+
+TRANSACTION PAGE
+- create one..
+- have a pizza that the person is ordering appear here as well
+    - updates accross each page during pizza selection + build process
+
+
+HOME PAGE
+- what to put here
