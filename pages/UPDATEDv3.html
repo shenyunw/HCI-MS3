@@ -30,7 +30,7 @@
     <style type="text/css">
 
 
-        body{
+        body {
             background-image: url("images/background.jpg");
             background-size: cover;
         }
@@ -43,8 +43,7 @@
             width: 50%;
         }
 
-
-        .topping-icon{
+        .topping-icon {
             display: inline;
             max-height: 1em;
         }
@@ -66,7 +65,6 @@
             display: none;
         }
 
-
         .navbar-brand > img {
             max-width: 7em;
             position: absolute;
@@ -84,7 +82,7 @@
             color: white;
             font-size: 3em;
         }
-        
+
         #pizza_side {
             width: 50%;
             height: 100%;
@@ -107,32 +105,28 @@
             width: 328px;
         }
 
-        
-        .store-menu{
+        .store-menu {
             background-image: url(images/cuttingboard.png);
             background-repeat: no-repeat;
         }
-        
+
         /*span#placeholder_text {*/
-            /*margin-top: 25%;*/
-            /*font-size: 2em;*/
-            /*position: relative;*/
-            /*display: inline-block;*/
+        /*margin-top: 25%;*/
+        /*font-size: 2em;*/
+        /*position: relative;*/
+        /*display: inline-block;*/
         /*}*/
-
-
 
         button {
             background-color: #4CAF50;
             color: white;
             padding: 14px 20px;
-            margin-left:25%;
+            margin-left: 25%;
             border: none;
             cursor: pointer;
             width: 50%;
 
         }
-
 
         .contact-info {
             text-align: center;
@@ -149,7 +143,7 @@
             overflow: hidden;
         }
 
-        .signupbox{
+        .signupbox {
             background: #ab2f2f;
             width: 45%;
             padding: 16px;
@@ -159,8 +153,6 @@
             overflow: hidden;
             text-align: right;
         }
-
-
 
 
     </style>
@@ -191,7 +183,8 @@
                 fade: true,
                 speed: 450,
                 infinite: true,
-                cssEase: 'linear'
+                cssEase: 'linear',
+                adaptiveHeight: true
             });
 
 
@@ -238,7 +231,7 @@
                 $('#site-body').slick('slickGoTo', 5);
             });
 
-            $('#nav-signup').on('click', function() {
+            $('#nav-signup').on('click', function () {
 
                 $('#site-body').slick('slickGoTo', 6);
             });
@@ -250,7 +243,9 @@
 <body>
 
 
-<div class="contact-info"><span class="glyphicon glyphicon-home"></span> 123 Rainbow Road  |  <span class="glyphicon glyphicon-earphone"></span> 555-555-5555</div>
+<div class="contact-info"><span class="glyphicon glyphicon-home"></span> 123 Rainbow Road | <span
+        class="glyphicon glyphicon-earphone"></span> 555-555-5555
+</div>
 
 <nav id="navbar-container" class="navbar navbar-default navbar-inverse">
     <div class="container-fluid">
@@ -283,42 +278,55 @@
 
     <!--BROWSE PAGE-->
     <div class="slider row" id="page-browse">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a data-toggle="tab" href="#store">Our Menu</a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#user">User Created</a>
+            </li>
+        </ul>
 
-        <div class="store-menu-container">
+        <div class="tab-content">
+            <div id="store" class="tab-pane fade in active">
+                <div class="store-menu ">
+                    <div class="media-left media-middle">
+                        <a href="#">
+                            <img class="media-object" src="images/toppings-pizzas-buttons-logo/pepperonipizza.png"
+                                 alt="pepperoini pizza">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Pepperoni Pizza</h4>
+                        Classic pepperoni pizza, comes standard with:<br>
+                        <ul>
+                            <li>Pepperoni</li>
+                            <li>Cheese</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-        <div class="store-menu ">
-            <div class="media-left media-middle">
-                <a href="#">
-                    <img class="media-object" src="images/toppings-pizzas-buttons-logo/pepperonipizza.png" alt="pepperoini pizza">
-                </a>
+            <div id="user" class="tab-pane fade">
+                <div class="store-menu">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="images/toppings-pizzas-buttons-logo/meatlover.png"
+                                 alt="meat lover pizza">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Meat Lover's Pizza</h4>
+                        Pizza for the lover of meats: <br>
+                        <ul>
+                            <li>Pepperoni</li>
+                            <li>Sausage</li>
+                            <li>Bacon bits</li>
+                            <li>Cheese</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="media-body">
-                <h4 class="media-heading">Pepperoni Pizza</h4>
-                Classic pepperoni pizza, comes standard with:<br>
-                <ul>
-                    <li>Pepperoni</li>
-                    <li>Cheese</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="store-menu">
-            <div class="media-left">
-                <a href="#">
-                    <img class="media-object" src="images/toppings-pizzas-buttons-logo/meatlover.png" alt="meat lover pizza">
-                </a>
-            </div>
-            <div class="media-body">
-                <h4 class="media-heading">Meat Lover's Pizza</h4>
-                Pizza for the lover of meats: <br>
-                <ul>
-                    <li>Pepperoni</li>
-                    <li>Sausage</li>
-                    <li>Bacon bits</li>
-                    <li>Cheese</li>
-                </ul>
-            </div>
-        </div>
         </div>
         <!--EMD STORE MENU CONTAINER-->
 
@@ -336,7 +344,7 @@
 
     <!--BUILD PAGE-->
     <div class="slider" id="page-build">
-       
+
         <!-- NEW (RANDAL'S) WORKPLACE -->
         <div id="workplace">
             <div id="toppings_side">
@@ -361,7 +369,7 @@
                         <br>
                         Choose your dough:
                         <br>
-                        <input type="checkbox" value="Crust" onclick="toggleTopping('Crust');"> 
+                        <input type="checkbox" value="Crust" onclick="toggleTopping('Crust');">
                         Regular Crust
                     </div>
                     <div id="cheese" class="tab-pane fade">
@@ -377,15 +385,21 @@
                         Choose your meats:<br>
                         <input type="checkbox" value="Pepperoni" onclick="toggleTopping('Pepperoni');">
                         Pepperoni
-                        <img class="topping-icon" src="images/toppings-pizzas-buttons-logo/topping%20buttons/pepperoni-icon.png" alt="pepperoni.png"/><br>
+                        <img class="topping-icon"
+                             src="images/toppings-pizzas-buttons-logo/topping%20buttons/pepperoni-icon.png"
+                             alt="pepperoni.png"/><br>
 
                         <input type="checkbox" value="Chicken" onclick="toggleTopping('Chicken');">
                         Chicken
-                        <img class="topping-icon" src="images/toppings-pizzas-buttons-logo/topping%20buttons/chicken-icon.png" alt="chicken.png"/><br>
+                        <img class="topping-icon"
+                             src="images/toppings-pizzas-buttons-logo/topping%20buttons/chicken-icon.png"
+                             alt="chicken.png"/><br>
 
                         <input type="checkbox" value="Bacon" onclick="toggleTopping('Bacon');">
                         Bacon
-                        <img class="topping-icon" src="images/toppings-pizzas-buttons-logo/topping%20buttons/baconbits-icon.png" alt="baconbits.png"/><br>
+                        <img class="topping-icon"
+                             src="images/toppings-pizzas-buttons-logo/topping%20buttons/baconbits-icon.png"
+                             alt="baconbits.png"/><br>
 
                     </div>
                     <div id="other" class="tab-pane fade">
@@ -393,8 +407,10 @@
                         Choose other toppings:
                         <br>
                         <input type="checkbox" value="Mushrooms" onclick="toggleTopping('Mushrooms');"> Mushrooms<br>
-                        <input type="checkbox" value="Green Peppers" onclick="toggleTopping('Green Pepper');"> Green Peppers<br>
-                        <input type="checkbox" value="Red Peppers" onclick="toggleTopping('Red Peppers');"> Red Pepers<br>
+                        <input type="checkbox" value="Green Peppers" onclick="toggleTopping('Green Pepper');"> Green
+                        Peppers<br>
+                        <input type="checkbox" value="Red Peppers" onclick="toggleTopping('Red Peppers');"> Red
+                        Pepers<br>
                         <input type="checkbox" value="Olives" onclick="toggleTopping('Olives');"> Olives<br>
                         <input type="checkbox" value="Tomatoes" onclick="toggleTopping('Tomatoes');"> Tomatoes<br>
                         <input type="checkbox" value="Spinach" onclick="toggleTopping('Spinach');"> Spinach<br>
@@ -473,7 +489,7 @@
 
 
     <!--SIGN UP PAGE-->
-    <div class="slider" id = "signup">
+    <div class="slider" id="signup">
 
         <form>
             <div class="signupbox">
@@ -487,7 +503,7 @@
                 <label><b>Postal Code</b></label>
                 <input type="text" placeholder="i.e. R1R1R1 or R1R 1R1" name="postalCode" required><br><br>
                 <label><b>Phone Number</b></label>
-                <input type="text" placeholder = "(area code)" name="firstname" required><br><br><br>
+                <input type="text" placeholder="(area code)" name="firstname" required><br><br><br>
                 <label><b>Username</b></label>
                 <input type="text" placeholder="6-16 characters" name="firstname" required><br><br>
                 <label><b>Password</b></label>
