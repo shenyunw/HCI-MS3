@@ -214,14 +214,26 @@
         }
 
         function selectButtonPress(id) {
-            toggleTopping('Crust');
-            toggleTopping('Mushrooms');
-            toggleTopping('Tomatoes');
-            toggleTopping('Spinach');
-            toggleTopping('Red Peppers');
-            toggleTopping('Green Pepper');
-            toggleTopping('Mozzarella');
-            toggleTopping('Olives');
+
+            if (id == "pep-pizza") {
+                toggleTopping('Crust');
+                toggleTopping('Mushrooms');
+                toggleTopping('Tomatoes');
+                toggleTopping('Spinach');
+                toggleTopping('Red Peppers');
+                toggleTopping('Green Pepper');
+                toggleTopping('Mozzarella');
+                toggleTopping('Olives');
+            } else if (id == "veg-pizza") {
+                toggleTopping('Crust');
+                toggleTopping('Mushrooms');
+                toggleTopping('Tomatoes');
+                toggleTopping('Spinach');
+                toggleTopping('Red Peppers');
+                toggleTopping('Green Pepper');
+                toggleTopping('Mozzarella');
+                toggleTopping('Olives');
+            }
         }
 
 
@@ -525,7 +537,7 @@
                             <li>Bacon bits</li>
                             <li>Cheese</li>
                         </ul>
-                        <img class="pizza-select-button" onclick="selectButtonPress();" src="images/toppings-pizzas-buttons-logo/leaf-button.png" alt="select button">
+                        <img class="pizza-select-button" onclick="selectButtonPress('pep-pizza');" src="images/toppings-pizzas-buttons-logo/leaf-button.png" alt="select button">
                     </div>
                 </div>
 
@@ -542,7 +554,7 @@
                             <li>Chicken</li>
                             <li>Cheese</li>
                         </ul>
-                        <img class="pizza-select-button" onclick="selectButtonPress();" src="Images/toppings-pizzas-buttons-logo/leaf-button.png" alt="select button">
+                        <img class="pizza-select-button" onclick="selectButtonPress('veg-pizza');" src="Images/toppings-pizzas-buttons-logo/leaf-button.png" alt="select button">
                         <fieldset class="starability-checkmark">
                             <legend>First rating:</legend>
                             <input type="radio" id="first-rate51" name="rating3" value="5"/>
