@@ -240,9 +240,29 @@
 
             //$('#nav-login').slick({vertical: true});
             $('#homepage-ads').slick({
-                arrows: true,
-                infinite: true,
-                cssEase: 'linear'
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 1,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
             });
 
 
@@ -335,11 +355,11 @@
     <!--HOME PAGE-->
     <div class="slider" id="page-home">
         <div id="homepage-ads">
-            <div>
-                <img class="slideshow-image" src="images/slideshow1.png" alt="Buy 2 get 1 free">
+            <div class="slideshow-image">
+                <img src="images/slideshow1.png" alt="Deal 1">
             </div>
-            <div>
-                <img class="slideshow-image" src="images/slideshow2.png" alt="deal2">
+            <div class="slideshow-image">
+                <img src="images/slideshow2.png" alt="Deal 2">
             </div>
         </div>
     </div>
