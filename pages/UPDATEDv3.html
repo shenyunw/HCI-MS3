@@ -16,6 +16,7 @@
     <!--<link rel="stylesheet" type="text/css" href="libraries/textillate-master/assets/style.css"/> -->
 
     <link rel="stylesheet" type="text/css" href="css/starability-all.css"/>
+    <link rel="stylesheet" type="text/css" href="libraries/slick/slick-theme.css"/>
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -79,6 +80,14 @@
 
         .navbar-nav {
             padding-left: 8%;
+        }
+
+        .slideshow-image img {
+            width:100%;
+        }
+
+        .slider {
+            background: white;
         }
 
         #navbar-container {
@@ -215,6 +224,13 @@
                 cssEase: 'linear'
             });
 
+            //$('#nav-login').slick({vertical: true});
+            $('#homepage-ads').slick({
+                arrows: true,
+                infinite: true,
+                cssEase: 'linear'
+            });
+
 
             $('page-advertisements').slick({draggable: false});
 
@@ -303,7 +319,16 @@
 <div id="site-body">
 
     <!--HOME PAGE-->
-    <div class="slider" id="page-home">HOME</div>
+    <div class="slider" id="page-home">
+        <div id="homepage-ads">
+            <div>
+                <img class="slideshow-image" src="images/slideshow1.png" alt="Buy 2 get 1 free">
+            </div>
+            <div>
+                <img class="slideshow-image" src="images/slideshow2.png" alt="deal2">
+            </div>
+        </div>
+    </div>
 
     <!--BROWSE PAGE-->
     <div class="slider" id="page-browse">
