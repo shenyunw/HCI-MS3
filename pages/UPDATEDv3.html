@@ -82,6 +82,10 @@
             display: flex;
         }
 
+        .tab-content {
+            display: flex;
+        }
+
         .browse-pizza_half {
             background: white;
         }
@@ -284,7 +288,7 @@
     <div class="slider" id="page-home">HOME</div>
 
     <!--BROWSE PAGE-->
-    <div class="slider row" id="page-browse">
+    <div class="slider" id="page-browse">
         <ul class="nav nav-tabs">
             <li class="active">
                 <a data-toggle="tab" href="#store">Our Menu</a>
@@ -395,76 +399,71 @@
 
     <!--BUILD PAGE-->
     <div class="slider" id="page-build">
-        <!-- NEW (RANDAL'S) WORKPLACE -->
-        <div id="workplace">
+        <ul class="nav nav-tabs">
+            <li class="active" id="tab-dough">
+                <a data-toggle="tab" href="#dough">Dough</a>
+            </li>
+            <li id="tab-cheese">
+                <a data-toggle="tab" href="#cheese">Cheese</a>
+            </li>
+            <li id="tab-meat">
+                <a data-toggle="tab" href="#meat">Meat</a>
+            </li>
+            <li id="tab-other">
+                <a data-toggle="tab" href="#other">Other</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
             <div id="toppings_side">
+                <div id="dough" class="tab-pane fade in active">
+                    <br>
+                    Choose your dough:
+                    <br>
+                    <input type="checkbox" value="Crust" onclick="toggleTopping('Crust');">
+                    Regular Crust
+                </div>
+                <div id="cheese" class="tab-pane fade">
+                    <br>
+                    Choose your cheese:
+                    <br>
+                    <input type="checkbox" value="Cheddar" onclick="toggleTopping('Cheddar');"> Cheddar<br>
+                    <input type="checkbox" value="Mozarella" onclick="toggleTopping('Mozarella');"> Mozarella<br>
+                </div>
+                <div id="meat" class="tab-pane fade">
+                    <br>
+                    Choose your meats:<br>
+                    <input type="checkbox" value="Pepperoni" onclick="toggleTopping('Pepperoni');">
+                    Pepperoni
+                    <img class="topping-icon"
+                         src="images/toppings-pizzas-buttons-logo/topping%20buttons/pepperoni-icon.png"
+                         alt="pepperoni.png"/><br>
 
-                <ul class="nav nav-tabs" id="pizza-topping-tabs">
-                    <li class="active" id="tab-dough">
-                        <a data-toggle="tab" href="#dough">Dough</a>
-                    </li>
-                    <li id="tab-cheese">
-                        <a data-toggle="tab" href="#cheese">Cheese</a>
-                    </li>
-                    <li id="tab-meat">
-                        <a data-toggle="tab" href="#meat">Meat</a>
-                    </li>
-                    <li id="tab-other">
-                        <a data-toggle="tab" href="#other">Other</a>
-                    </li>
-                </ul>
+                    <input type="checkbox" value="Chicken" onclick="toggleTopping('Chicken');">
+                    Chicken
+                    <img class="topping-icon"
+                         src="images/toppings-pizzas-buttons-logo/topping%20buttons/chicken-icon.png"
+                         alt="chicken.png"/><br>
 
-                <div class="tab-content">
-                    <div id="dough" class="tab-pane fade in active">
-                        <br>
-                        Choose your dough:
-                        <br>
-                        <input type="checkbox" value="Crust" onclick="toggleTopping('Crust');">
-                        Regular Crust
-                    </div>
-                    <div id="cheese" class="tab-pane fade">
-                        <br>
-                        Choose your cheese:
-                        <br>
-                        <input type="checkbox" value="Cheddar" onclick="toggleTopping('Cheddar');"> Cheddar<br>
-                        <input type="checkbox" value="Mozarella" onclick="toggleTopping('Mozarella');"> Mozarella<br>
-                    </div>
+                    <input type="checkbox" value="Bacon" onclick="toggleTopping('Bacon');">
+                    Bacon
+                    <img class="topping-icon"
+                         src="images/toppings-pizzas-buttons-logo/topping%20buttons/baconbits-icon.png"
+                         alt="baconbits.png"/><br>
 
-                    <div id="meat" class="tab-pane fade">
-                        <br>
-                        Choose your meats:<br>
-                        <input type="checkbox" value="Pepperoni" onclick="toggleTopping('Pepperoni');">
-                        Pepperoni
-                        <img class="topping-icon"
-                             src="images/toppings-pizzas-buttons-logo/topping%20buttons/pepperoni-icon.png"
-                             alt="pepperoni.png"/><br>
-
-                        <input type="checkbox" value="Chicken" onclick="toggleTopping('Chicken');">
-                        Chicken
-                        <img class="topping-icon"
-                             src="images/toppings-pizzas-buttons-logo/topping%20buttons/chicken-icon.png"
-                             alt="chicken.png"/><br>
-
-                        <input type="checkbox" value="Bacon" onclick="toggleTopping('Bacon');">
-                        Bacon
-                        <img class="topping-icon"
-                             src="images/toppings-pizzas-buttons-logo/topping%20buttons/baconbits-icon.png"
-                             alt="baconbits.png"/><br>
-
-                    </div>
-                    <div id="other" class="tab-pane fade">
-                        <br>
-                        Choose other toppings:
-                        <br>
-                        <input type="checkbox" value="Mushrooms" onclick="toggleTopping('Mushrooms');"> Mushrooms<br>
-                        <input type="checkbox" value="Green Peppers" onclick="toggleTopping('Green Pepper');"> Green
-                        Peppers<br>
-                        <input type="checkbox" value="Red Peppers" onclick="toggleTopping('Red Peppers');"> Red
-                        Pepers<br>
-                        <input type="checkbox" value="Olives" onclick="toggleTopping('Olives');"> Olives<br>
-                        <input type="checkbox" value="Tomatoes" onclick="toggleTopping('Tomatoes');"> Tomatoes<br>
-                        <input type="checkbox" value="Spinach" onclick="toggleTopping('Spinach');"> Spinach<br>
-                    </div>
+                </div>
+                <div id="other" class="tab-pane fade">
+                    <br>
+                    Choose other toppings:
+                    <br>
+                    <input type="checkbox" value="Mushrooms" onclick="toggleTopping('Mushrooms');"> Mushrooms<br>
+                    <input type="checkbox" value="Green Peppers" onclick="toggleTopping('Green Pepper');"> Green
+                    Peppers<br>
+                    <input type="checkbox" value="Red Peppers" onclick="toggleTopping('Red Peppers');"> Red
+                    Pepers<br>
+                    <input type="checkbox" value="Olives" onclick="toggleTopping('Olives');"> Olives<br>
+                    <input type="checkbox" value="Tomatoes" onclick="toggleTopping('Tomatoes');"> Tomatoes<br>
+                    <input type="checkbox" value="Spinach" onclick="toggleTopping('Spinach');"> Spinach<br>
                 </div>
             </div>
             <div id="pizza_side">
@@ -491,8 +490,8 @@
                     <img class="buildImage" id="Spinach" src="images/toppings-pizzas-buttons-logo/toppings/spinach.png">
                 </div>
             </div>
-
         </div>
+
     </div>
 
 
@@ -508,9 +507,7 @@
                 <input type="password" placeholder="Enter Password" name="psw" required><br><br>
 
                 <button type="submit">Login</button>
-
             </div>
-
         </form>
     </div>
 
