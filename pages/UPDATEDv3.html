@@ -31,7 +31,7 @@
     <style type="text/css">
 
 
-        body{
+        body {
             background-image: url("images/background.jpg");
             background-size: cover;
         }
@@ -42,10 +42,10 @@
 
         #toppings_side {
             width: 50%;
+            background: white;
         }
 
-
-        .topping-icon{
+        .topping-icon {
             display: inline;
             max-height: 1em;
         }
@@ -55,16 +55,7 @@
             border-style: solid;
         }
 
-
-        /*div#tabs {*/
-            /*display: flex;*/
-        /*}*/
-
-        /*.tab_content {*/
-            /*display: none;*/
-        /*}*/
-
-        #pizza-topping-tabs{
+        #pizza-topping-tabs, .nav-tabs{
             background-color: white !important;
             color: black;
         }
@@ -86,7 +77,20 @@
             color: white;
             font-size: 3em;
         }
-        
+
+        .container-browse {
+            display: flex;
+        }
+
+        .browse-pizza_half {
+            background: white;
+        }
+
+        .browse-pizza_description_half {
+            background: white;
+            width: 100%;
+        }
+
         #pizza_side {
             width: 50%;
             height: 100%;
@@ -109,32 +113,28 @@
             width: 328px;
         }
 
-        
-        .store-menu{
+        .store-menu {
             background-image: url(images/cuttingboard.png);
             background-repeat: no-repeat;
         }
-        
+
         /*span#placeholder_text {*/
-            /*margin-top: 25%;*/
-            /*font-size: 2em;*/
-            /*position: relative;*/
-            /*display: inline-block;*/
+        /*margin-top: 25%;*/
+        /*font-size: 2em;*/
+        /*position: relative;*/
+        /*display: inline-block;*/
         /*}*/
-
-
 
         button {
             background-color: #4CAF50;
             color: white;
             padding: 14px 20px;
-            margin-left:25%;
+            margin-left: 25%;
             border: none;
             cursor: pointer;
             width: 50%;
 
         }
-
 
         .contact-info {
             text-align: center;
@@ -151,7 +151,7 @@
             overflow: hidden;
         }
 
-        .signupbox{
+        .signupbox {
             background: #ab2f2f;
             width: 45%;
             padding: 16px;
@@ -161,8 +161,6 @@
             overflow: hidden;
             text-align: right;
         }
-
-
 
 
     </style>
@@ -240,7 +238,7 @@
                 $('#site-body').slick('slickGoTo', 5);
             });
 
-            $('#nav-signup').on('click', function() {
+            $('#nav-signup').on('click', function () {
 
                 $('#site-body').slick('slickGoTo', 6);
             });
@@ -252,7 +250,9 @@
 <body>
 
 
-<div class="contact-info"><span class="glyphicon glyphicon-home"></span> 123 Rainbow Road  |  <span class="glyphicon glyphicon-earphone"></span> 555-555-5555</div>
+<div class="contact-info"><span class="glyphicon glyphicon-home"></span> 123 Rainbow Road | <span
+        class="glyphicon glyphicon-earphone"></span> 555-555-5555
+</div>
 
 <nav id="navbar-container" class="navbar navbar-default navbar-inverse">
     <div class="container-fluid">
@@ -296,26 +296,24 @@
 
         <div class="tab-content">
             <div id="store" class="tab-pane fade in active">
-                <div class="store-menu ">
-                    <div class="media-left media-middle">
-                        <a href="#">
-                            <img class="media-object" src="images/toppings-pizzas-buttons-logo/pepperonipizza.png"
-                                 alt="pepperoini pizza">
-                        </a>
+                <div class="container-browse">
+                    <div class="browse-pizza_half">
+                        <img class="media-object" src="images/toppings-pizzas-buttons-logo/pepperonipizza.png"
+                             alt="pepperoini pizza">
                     </div>
-                    <div class="media-body">
-                        <h4 class="media-heading">Pepperoni Pizza</h4>
+                    <div class="browse-pizza_description_half">
+                        <h4 class="browse-pizza_title">Pepperoni Pizza</h4>
                         <fieldset class="starability-checkmark">
                             <legend>Rating:</legend>
-                            <input type="radio" id="first-rate5" name="rating1" value="5" />
+                            <input type="radio" id="first-rate5" name="rating1" value="5"/>
                             <label for="first-rate5" title="Amazing">5 stars</label>
-                            <input type="radio" id="first-rate4" name="rating1" value="4" />
+                            <input type="radio" id="first-rate4" name="rating1" value="4"/>
                             <label for="first-rate4" title="Very good">4 stars</label>
-                            <input type="radio" id="first-rate3" name="rating1" value="3" />
+                            <input type="radio" id="first-rate3" name="rating1" value="3"/>
                             <label for="first-rate3" title="Average">3 stars</label>
-                            <input type="radio" id="first-rate2" name="rating1" value="2" />
+                            <input type="radio" id="first-rate2" name="rating1" value="2"/>
                             <label for="first-rate2" title="Not good">2 stars</label>
-                            <input type="radio" id="first-rate1" name="rating1" value="1" />
+                            <input type="radio" id="first-rate1" name="rating1" value="1"/>
                             <label for="first-rate1" title="Terrible">1 star</label>
                         </fieldset>
                         Classic pepperoni pizza, comes standard with:<br>
@@ -327,28 +325,27 @@
                 </div>
             </div>
 
+        <!--START CUSTOM MENU CONTAINER-->
             <div id="user" class="tab-pane fade">
-                <div class="store-menu">
-                    <div class="media-left">
-                        <a href="#">
-                            <img class="media-object" src="images/toppings-pizzas-buttons-logo/meatlover.png"
-                                 alt="meat lover pizza">
-                        </a>
+                <div class="container-browse">
+                    <div class="browse-pizza_half">
+                        <img class="media-object" src="images/toppings-pizzas-buttons-logo/meatlover.png"
+                             alt="meat lover pizza">
                     </div>
-                    <div class="media-body">
+                    <div class="browse-pizza_description_half">
                         <h4 class="media-heading">Meat Lover's Pizza
                         </h4>
                         <fieldset class="starability-checkmark">
                             <legend>Rating:</legend>
-                            <input type="radio" id="first-rate52" name="rating2" value="5" />
+                            <input type="radio" id="first-rate52" name="rating2" value="5"/>
                             <label for="first-rate52" title="Amazing">5 stars</label>
-                            <input type="radio" id="first-rate42" name="rating2" value="4" />
+                            <input type="radio" id="first-rate42" name="rating2" value="4"/>
                             <label for="first-rate42" title="Very good">4 stars</label>
-                            <input type="radio" id="first-rate32" name="rating2" value="3" />
+                            <input type="radio" id="first-rate32" name="rating2" value="3"/>
                             <label for="first-rate32" title="Average">3 stars</label>
-                            <input type="radio" id="first-rate22" name="rating2" value="2" />
+                            <input type="radio" id="first-rate22" name="rating2" value="2"/>
                             <label for="first-rate22" title="Not good">2 stars</label>
-                            <input type="radio" id="first-rate12" name="rating2" value="1" />
+                            <input type="radio" id="first-rate12" name="rating2" value="1"/>
                             <label for="first-rate12" title="Terrible">1 star</label>
                         </fieldset>
                         Pizza for the lover of meats: <br>
@@ -358,18 +355,15 @@
                             <li>Bacon bits</li>
                             <li>Cheese</li>
                         </ul>
-
                     </div>
                 </div>
 
-                <div class="store-menu">
-                    <div class="media-left">
-                        <a href="#">
-                            <img class="media-object" src="images/toppings-pizzas-buttons-logo/mushroomchicken.png"
-                                 alt="mushroom chicken pizza">
-                        </a>
+                <div class="container-browse">
+                    <div class="browse-pizza_half">
+                        <img class="media-object" src="images/toppings-pizzas-buttons-logo/mushroomchicken.png"
+                             alt="mushroom chicken pizza">
                     </div>
-                    <div class="media-body">
+                    <div class="browse-pizza_description_half">
                         <h4 class="media-heading">Mushroom Chicken Pizza</h4>
                         Pizza for mushroom and chicken lovers!: <br>
                         <ul>
@@ -379,39 +373,28 @@
                         </ul>
                         <fieldset class="starability-checkmark">
                             <legend>First rating:</legend>
-                            <input type="radio" id="first-rate51" name="rating3" value="5" />
+                            <input type="radio" id="first-rate51" name="rating3" value="5"/>
                             <label for="first-rate51" title="Amazing">5 stars</label>
-                            <input type="radio" id="first-rate41" name="rating3" value="4" />
+                            <input type="radio" id="first-rate41" name="rating3" value="4"/>
                             <label for="first-rate41" title="Very good">4 stars</label>
-                            <input type="radio" id="first-rate31" name="rating3" value="3" />
+                            <input type="radio" id="first-rate31" name="rating3" value="3"/>
                             <label for="first-rate31" title="Average">3 stars</label>
-                            <input type="radio" id="first-rate21" name="rating3" value="2" />
+                            <input type="radio" id="first-rate21" name="rating3" value="2"/>
                             <label for="first-rate21" title="Not good">2 stars</label>
-                            <input type="radio" id="first-rate11" name="rating3" value="1" />
+                            <input type="radio" id="first-rate11" name="rating3" value="1"/>
                             <label for="first-rate11" title="Terrible">1 star</label>
                         </fieldset>
                     </div>
                 </div>
-
             </div>
-        </div>
-        <!--EMD STORE MENU CONTAINER-->
-
-
-        <!--START CUSTOM MENU CONTAINER-->
-        <div class="custom-menu-container">
-
-
-        </div>
         <!--END CUSTOM MENU CONTAINER-->
 
-
+        </div>
     </div>
     <!--END BROWSE CONTAINER-->
 
     <!--BUILD PAGE-->
     <div class="slider" id="page-build">
-       
         <!-- NEW (RANDAL'S) WORKPLACE -->
         <div id="workplace">
             <div id="toppings_side">
@@ -436,7 +419,7 @@
                         <br>
                         Choose your dough:
                         <br>
-                        <input type="checkbox" value="Crust" onclick="toggleTopping('Crust');"> 
+                        <input type="checkbox" value="Crust" onclick="toggleTopping('Crust');">
                         Regular Crust
                     </div>
                     <div id="cheese" class="tab-pane fade">
@@ -452,15 +435,21 @@
                         Choose your meats:<br>
                         <input type="checkbox" value="Pepperoni" onclick="toggleTopping('Pepperoni');">
                         Pepperoni
-                        <img class="topping-icon" src="images/toppings-pizzas-buttons-logo/topping%20buttons/pepperoni-icon.png" alt="pepperoni.png"/><br>
+                        <img class="topping-icon"
+                             src="images/toppings-pizzas-buttons-logo/topping%20buttons/pepperoni-icon.png"
+                             alt="pepperoni.png"/><br>
 
                         <input type="checkbox" value="Chicken" onclick="toggleTopping('Chicken');">
                         Chicken
-                        <img class="topping-icon" src="images/toppings-pizzas-buttons-logo/topping%20buttons/chicken-icon.png" alt="chicken.png"/><br>
+                        <img class="topping-icon"
+                             src="images/toppings-pizzas-buttons-logo/topping%20buttons/chicken-icon.png"
+                             alt="chicken.png"/><br>
 
                         <input type="checkbox" value="Bacon" onclick="toggleTopping('Bacon');">
                         Bacon
-                        <img class="topping-icon" src="images/toppings-pizzas-buttons-logo/topping%20buttons/baconbits-icon.png" alt="baconbits.png"/><br>
+                        <img class="topping-icon"
+                             src="images/toppings-pizzas-buttons-logo/topping%20buttons/baconbits-icon.png"
+                             alt="baconbits.png"/><br>
 
                     </div>
                     <div id="other" class="tab-pane fade">
@@ -468,8 +457,10 @@
                         Choose other toppings:
                         <br>
                         <input type="checkbox" value="Mushrooms" onclick="toggleTopping('Mushrooms');"> Mushrooms<br>
-                        <input type="checkbox" value="Green Peppers" onclick="toggleTopping('Green Pepper');"> Green Peppers<br>
-                        <input type="checkbox" value="Red Peppers" onclick="toggleTopping('Red Peppers');"> Red Pepers<br>
+                        <input type="checkbox" value="Green Peppers" onclick="toggleTopping('Green Pepper');"> Green
+                        Peppers<br>
+                        <input type="checkbox" value="Red Peppers" onclick="toggleTopping('Red Peppers');"> Red
+                        Pepers<br>
                         <input type="checkbox" value="Olives" onclick="toggleTopping('Olives');"> Olives<br>
                         <input type="checkbox" value="Tomatoes" onclick="toggleTopping('Tomatoes');"> Tomatoes<br>
                         <input type="checkbox" value="Spinach" onclick="toggleTopping('Spinach');"> Spinach<br>
@@ -524,7 +515,7 @@
     </div>
 
     <!--EMPLOYEE LOGIN PAGE-->
-    <div class="slider" id="page-login">
+    <div class="slider" id="page-employee">
 
 
         <form>
@@ -548,7 +539,7 @@
 
 
     <!--SIGN UP PAGE-->
-    <div class="slider" id = "signup">
+    <div class="slider" id="signup">
 
         <form>
             <div class="signupbox">
@@ -562,7 +553,7 @@
                 <label><b>Postal Code</b></label>
                 <input type="text" placeholder="i.e. R1R1R1 or R1R 1R1" name="postalCode" required><br><br>
                 <label><b>Phone Number</b></label>
-                <input type="text" placeholder = "(area code)" name="firstname" required><br><br><br>
+                <input type="text" placeholder="(area code)" name="firstname" required><br><br><br>
                 <label><b>Username</b></label>
                 <input type="text" placeholder="6-16 characters" name="firstname" required><br><br>
                 <label><b>Password</b></label>
