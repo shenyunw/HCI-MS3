@@ -41,7 +41,7 @@
         }
 
         #toppings_side {
-            width: 50%;
+            width: 100%;
             background: white;
         }
 
@@ -55,7 +55,11 @@
             border-style: solid;
         }
 
-        #pizza-topping-tabs, .nav-tabs{
+        .toppings_container {
+            display: flex;
+        }
+
+        #pizza-topping-tabs, .nav-tabs {
             background-color: white !important;
             color: black;
         }
@@ -89,6 +93,8 @@
 
         .tab-content {
             display: flex;
+            width: 50%;
+            background: white;
         }
 
         .browse-pizza_half {
@@ -102,7 +108,7 @@
 
         #pizza_side {
             width: 50%;
-            height: 100%;
+            background: white;
         }
 
         #placeholder_pizza {
@@ -152,8 +158,6 @@
             background-color: #080606;
             position: absolute;
             top: 0;
-            /* left: 25%; */
-            /* right: 25%; */
             width: 100%;
             border-bottom-color: #080808;
         }
@@ -263,8 +267,6 @@
     </script>
 </head>
 <body>
-
-
 
 
 <nav id="navbar-container" class="navbar navbar-default navbar-inverse">
@@ -382,7 +384,7 @@
 
             </div>
 
-        <!--START CUSTOM MENU CONTAINER-->
+            <!--START CUSTOM MENU CONTAINER-->
             <div id="user" class="tab-pane fade">
                 <div class="container-browse">
                     <div class="browse-pizza_half">
@@ -448,7 +450,7 @@
                     </div>
                 </div>
             </div>
-        <!--END CUSTOM MENU CONTAINER-->
+            <!--END CUSTOM MENU CONTAINER-->
 
         </div>
     </div>
@@ -471,25 +473,20 @@
             </li>
         </ul>
 
-        <div class="tab-content">
-            <div id="toppings_side">
-                <div id="dough" class="tab-pane fade in active">
-                    <br>
-                    Choose your dough:
-                    <br>
+        <div class="toppings_container">
+            <div class="tab-content">
+                <div id="dough" class="topping tab-pane fade in active">
+                    <h3>Choose your dough:</h3>
                     <input type="checkbox" value="Crust" onclick="toggleTopping('Crust');">
                     Regular Crust
                 </div>
-                <div id="cheese" class="tab-pane fade">
-                    <br>
-                    Choose your cheese:
-                    <br>
+                <div id="cheese" class="topping tab-pane fade">
+                    <h3>Choose your cheese:</h3>
                     <input type="checkbox" value="Cheddar" onclick="toggleTopping('Cheddar');"> Cheddar<br>
                     <input type="checkbox" value="Mozarella" onclick="toggleTopping('Mozarella');"> Mozarella<br>
                 </div>
-                <div id="meat" class="tab-pane fade">
-                    <br>
-                    Choose your meats:<br>
+                <div id="meat" class="topping tab-pane fade">
+                    <h3>Choose your meats:</h3>
                     <input type="checkbox" value="Pepperoni" onclick="toggleTopping('Pepperoni');">
                     Pepperoni
                     <img class="topping-icon"
@@ -509,10 +506,8 @@
                          alt="baconbits.png"/><br>
 
                 </div>
-                <div id="other" class="tab-pane fade">
-                    <br>
-                    Choose other toppings:
-                    <br>
+                <div id="other" class="topping tab-pane fade">
+                    <h3>Choose your other toppings:</h3>
                     <input type="checkbox" value="Mushrooms" onclick="toggleTopping('Mushrooms');"> Mushrooms<br>
                     <img class="topping-icon"
                          src="images/toppings-pizzas-buttons-logo/topping%20buttons/mushroom-icon.png"
@@ -554,6 +549,7 @@
                          alt="spinach.png"/><br>
                 </div>
             </div>
+
             <div id="pizza_side">
                 <img id="pizza_side-background" src="images/cuttingboard.png" alt="Cuttingboard">
                 <div id="placeholder_pizza">
@@ -588,6 +584,7 @@
                 </div>
             </div>
         </div>
+
 
     </div>
 
