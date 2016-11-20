@@ -284,42 +284,55 @@
 
     <!--BROWSE PAGE-->
     <div class="slider row" id="page-browse">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a data-toggle="tab" href="#store">Our Menu</a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#user">User Created</a>
+            </li>
+        </ul>
 
-        <div class="store-menu-container">
+        <div class="tab-content">
+            <div id="store" class="tab-pane fade in active">
+                <div class="store-menu ">
+                    <div class="media-left media-middle">
+                        <a href="#">
+                            <img class="media-object" src="images/toppings-pizzas-buttons-logo/pepperonipizza.png"
+                                 alt="pepperoini pizza">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Pepperoni Pizza</h4>
+                        Classic pepperoni pizza, comes standard with:<br>
+                        <ul>
+                            <li>Pepperoni</li>
+                            <li>Cheese</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-        <div class="store-menu ">
-            <div class="media-left media-middle">
-                <a href="#">
-                    <img class="media-object" src="images/toppings-pizzas-buttons-logo/pepperonipizza.png" alt="pepperoini pizza">
-                </a>
+            <div id="user" class="tab-pane fade">
+                <div class="store-menu">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="images/toppings-pizzas-buttons-logo/meatlover.png"
+                                 alt="meat lover pizza">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Meat Lover's Pizza</h4>
+                        Pizza for the lover of meats: <br>
+                        <ul>
+                            <li>Pepperoni</li>
+                            <li>Sausage</li>
+                            <li>Bacon bits</li>
+                            <li>Cheese</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="media-body">
-                <h4 class="media-heading">Pepperoni Pizza</h4>
-                Classic pepperoni pizza, comes standard with:<br>
-                <ul>
-                    <li>Pepperoni</li>
-                    <li>Cheese</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="store-menu">
-            <div class="media-left">
-                <a href="#">
-                    <img class="media-object" src="images/toppings-pizzas-buttons-logo/meatlover.png" alt="meat lover pizza">
-                </a>
-            </div>
-            <div class="media-body">
-                <h4 class="media-heading">Meat Lover's Pizza</h4>
-                Pizza for the lover of meats: <br>
-                <ul>
-                    <li>Pepperoni</li>
-                    <li>Sausage</li>
-                    <li>Bacon bits</li>
-                    <li>Cheese</li>
-                </ul>
-            </div>
-        </div>
         </div>
         <!--EMD STORE MENU CONTAINER-->
 
@@ -434,7 +447,7 @@
     <!--CUSTOMER LOG IN PAGE-->
     <div class="slider" id="page-login">
 
-        <form>
+        <form action="#">
             <div class="loginbox">
                 <p align="center"><font size="5%" color="white">Login</font></p><br>
                 <label>Username</label>
