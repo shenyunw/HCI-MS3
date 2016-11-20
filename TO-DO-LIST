@@ -1,5 +1,5 @@
 BROWSE
-- Rating system
+x Rating system
 - add more pizzas
 - link the "select" button to the build + transaction page
     (when a menu pizza is selected, update the build with preloaded ingredients, also on transaction page too)
