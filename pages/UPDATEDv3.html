@@ -61,10 +61,15 @@
         }
 
         .navbar-brand > img {
-            max-width: 7em;
+            max-width: 5%;
+            display: block;
             position: absolute;
-            top: -35px;
-            left: 3px;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar-inverse {
+            background-color: #080606;
         }
 
         .navbar-nav {
@@ -142,9 +147,15 @@
 
         .contact-info {
             text-align: center;
-            font-size: 2em;
+            font-size: 0.5em;
             color: white;
-            background-color: #222;
+            background-color: #080606;
+            position: absolute;
+            top: 0;
+            /* left: 25%; */
+            /* right: 25%; */
+            width: 100%;
+            border-bottom-color: #080808;
         }
 
         .loginbox {
@@ -254,11 +265,12 @@
 <body>
 
 
-<div class="contact-info"><span class="glyphicon glyphicon-home"></span> 123 Rainbow Road | <span
-        class="glyphicon glyphicon-earphone"></span> 555-555-5555
-</div>
+
 
 <nav id="navbar-container" class="navbar navbar-default navbar-inverse">
+    <div class="contact-info"><span class="_glyphicon _glyphicon-home"></span> 123 Rainbow Road | <span
+            class="_glyphicon _glyphicon-earphone"></span> 555-555-5555
+    </div>
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#"><img alt="BYO Pizza" src="Images/logo.jpg"></a>
