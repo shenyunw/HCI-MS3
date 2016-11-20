@@ -199,11 +199,25 @@
 
         // function for change the state of something when a button is clicked
         function toggleTopping(id) {
-            currentValue = document.getElementById(id).style.visibility;
+            var currentValue = document.getElementById(id).style.visibility;
             if (!currentValue || currentValue == "hidden") {
                 document.getElementById(id).style.visibility = "visible";
             } else {
                 document.getElementById(id).style.visibility = "hidden";
+            }
+        }
+
+
+    </script>
+
+    <script type="text/javascript">
+
+        function checkboxToggle(id){
+            var currVal = document.getElementById(id).checked;
+            if(currVal ==false){
+                currVal= true;
+            } else {
+                currVal= false;
             }
         }
 
@@ -370,7 +384,14 @@
                         </ul>
 
                         <input type="image" alt=pizza-select-button" src="Images/toppings-pizzas-buttons-logo/leaf-button.png"
-                             onclick="toggleTopping('Crust'); toggleTopping('Pepperoni'); toggleTopping('Mozzarella');">
+                             onclick="
+                             toggleTopping('Crust');
+                             toggleTopping('Pepperoni');
+                             toggleTopping('Mozzarella');
+
+                             checkboxToggle('CrustCB');
+                             checkboxToggle('PepperoniCB');
+                             checkboxToggle('MozzarellaCB');">
                     </div>
                 </div>
 
@@ -507,23 +528,23 @@
             <div class="tab-content">
                 <div id="dough" class="topping tab-pane fade in active">
                     <h3>Choose your dough:</h3>
-                    <input type="checkbox" value="Crust" onclick="toggleTopping('Crust');">
+                    <input type="checkbox" id="CrustCB" value="Crust" onclick="toggleTopping('Crust');">
                     Regular Crust
                 </div>
                 <div id="cheese" class="topping tab-pane fade">
                     <h3>Choose your cheese:</h3>
-                    <input type="checkbox" value="Cheddar" onclick="toggleTopping('Cheddar');"> Cheddar<br>
-                    <input type="checkbox" value="Mozzarella" onclick="toggleTopping('Mozzarella');"> Mozzarella<br>
+                    <input type="checkbox" id="CheddarCB" value="Cheddar" onclick="toggleTopping('Cheddar');"> Cheddar<br>
+                    <input type="checkbox" id="MozzarellaCB" value="Mozzarella" onclick="toggleTopping('Mozzarella');"> Mozzarella<br>
                 </div>
                 <div id="meat" class="topping tab-pane fade">
                     <h3>Choose your meats:</h3>
-                    <input type="checkbox" value="Pepperoni" onclick="toggleTopping('Pepperoni');">
+                    <input type="checkbox" id="PepperoniCB" value="Pepperoni" onclick="toggleTopping('Pepperoni');">
                     Pepperoni
                     <img class="topping-icon"
                          src="Images/toppings-pizzas-buttons-logo/topping%20buttons/pepperoni-icon.png"
                          alt="pepperoni.png"/><br>
 
-                    <input type="checkbox" value="Chicken" onclick="toggleTopping('Chicken');">
+                    <input type="checkbox" id="ChickenCB" value="Chicken" onclick="toggleTopping('Chicken');">
                     Chicken
                     <img class="topping-icon"
                          src="Images/toppings-pizzas-buttons-logo/topping%20buttons/chicken-icon.png"
