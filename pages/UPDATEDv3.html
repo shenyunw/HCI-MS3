@@ -46,7 +46,7 @@
         }
 
         .topping-icon {
-            display: inline;
+            display: inline !important;
             max-height: 1em;
         }
 
@@ -93,8 +93,6 @@
 
         .tab-content {
             display: flex;
-            width: 50%;
-            background: white;
         }
 
         .browse-pizza_half {
@@ -108,7 +106,7 @@
 
         #pizza_side {
             width: 50%;
-            background: white;
+            height: 100%;
         }
 
         #placeholder_pizza {
@@ -158,6 +156,8 @@
             background-color: #080606;
             position: absolute;
             top: 0;
+            /* left: 25%; */
+            /* right: 25%; */
             width: 100%;
             border-bottom-color: #080808;
         }
@@ -269,6 +269,8 @@
 <body>
 
 
+
+
 <nav id="navbar-container" class="navbar navbar-default navbar-inverse">
     <div class="contact-info"><span class="_glyphicon _glyphicon-home"></span> 123 Rainbow Road | <span
             class="_glyphicon _glyphicon-earphone"></span> 555-555-5555
@@ -340,8 +342,8 @@
                             <li>Cheese</li>
                         </ul>
 
-                        <img class="pizza-select-button" src="images/toppings-pizzas-buttons-logo/leaf-button.png"
-                             alt="select button">
+                        <input type="image" alt=pizza-select-button" src="images/toppings-pizzas-buttons-logo/leaf-button.png"
+                             onclick="toggleTopping('Crust'); toggleTopping('Pepperoni'); toggleTopping('Mozzarella');">
                     </div>
                 </div>
 
@@ -384,7 +386,7 @@
 
             </div>
 
-            <!--START CUSTOM MENU CONTAINER-->
+        <!--START CUSTOM MENU CONTAINER-->
             <div id="user" class="tab-pane fade">
                 <div class="container-browse">
                     <div class="browse-pizza_half">
@@ -450,7 +452,7 @@
                     </div>
                 </div>
             </div>
-            <!--END CUSTOM MENU CONTAINER-->
+        <!--END CUSTOM MENU CONTAINER-->
 
         </div>
     </div>
@@ -483,7 +485,7 @@
                 <div id="cheese" class="topping tab-pane fade">
                     <h3>Choose your cheese:</h3>
                     <input type="checkbox" value="Cheddar" onclick="toggleTopping('Cheddar');"> Cheddar<br>
-                    <input type="checkbox" value="Mozarella" onclick="toggleTopping('Mozarella');"> Mozarella<br>
+                    <input type="checkbox" value="Mozzarella" onclick="toggleTopping('Mozzarella');"> Mozzarella<br>
                 </div>
                 <div id="meat" class="topping tab-pane fade">
                     <h3>Choose your meats:</h3>
@@ -513,43 +515,42 @@
                          src="images/toppings-pizzas-buttons-logo/topping%20buttons/mushroom-icon.png"
                          alt="mushroom.png"/><br>
 
-                    <input type="checkbox" value="Green Peppers" onclick="toggleTopping('Green Pepper');"> Green Peppers<br>
+                    <input type="checkbox" value="Green Peppers" onclick="toggleTopping('Green Pepper');"> Green Peppers
                     <img class="topping-icon"
                          src="images/toppings-pizzas-buttons-logo/topping%20buttons/pepper-icon.png"
                          alt="pepper.png"/><br>
 
-                    <input type="checkbox" value="Red Peppers" onclick="toggleTopping('Red Peppers');"> Red Peppers<br>
+                    <input type="checkbox" value="Red Peppers" onclick="toggleTopping('Red Peppers');"> Red Peppers
                     <img class="topping-icon"
                          src="images/toppings-pizzas-buttons-logo/topping%20buttons/redpepper-icon.png"
                          alt="red pepper.png"/><br>
 
-                    <input type="checkbox" value="Olives" onclick="toggleTopping('Olives');"> Olives<br>
+                    <input type="checkbox" value="Olives" onclick="toggleTopping('Olives');"> Olives
                     <img class="topping-icon"
                          src="images/toppings-pizzas-buttons-logo/topping%20buttons/olive-icon.png"
                          alt="olive.png"/><br>
 
-                    <input type="checkbox" value="Sashimi" onclick="toggleTopping('Sashimi');"> Sashimi<br>
+                    <input type="checkbox" value="Sashimi" onclick="toggleTopping('Sashimi');"> Sashimi
                     <img class="topping-icon"
                          src="images/toppings-pizzas-buttons-logo/topping%20buttons/sashimi-icon.png"
                          alt="sashimi.png"/><br>
 
-                    <input type="checkbox" value="Shrimp" onclick="toggleTopping('Shrimp');"> Shrimp<br>
+                    <input type="checkbox" value="Shrimp" onclick="toggleTopping('Shrimp');"> Shrimp
                     <img class="topping-icon"
                          src="images/toppings-pizzas-buttons-logo/topping%20buttons/shrimp-icon.png"
                          alt="shrimp.png"/><br>
 
-                    <input type="checkbox" value="Tomatoes" onclick="toggleTopping('Tomatoes');"> Tomatoes<br>
+                    <input type="checkbox" value="Tomatoes" onclick="toggleTopping('Tomatoes');"> Tomatoes
                     <img class="topping-icon"
                          src="images/toppings-pizzas-buttons-logo/topping%20buttons/tomato-icon.png"
                          alt="tomatoes.png"/><br>
 
-                    <input type="checkbox" value="Spinach" onclick="toggleTopping('Spinach');"> Spinach<br>
+                    <input type="checkbox" value="Spinach" onclick="toggleTopping('Spinach');"> Spinach
                     <img class="topping-icon"
                          src="images/toppings-pizzas-buttons-logo/topping%20buttons/spinach-icon.png"
                          alt="spinach.png"/><br>
                 </div>
             </div>
-
             <div id="pizza_side">
                 <img id="pizza_side-background" src="images/cuttingboard.png" alt="Cuttingboard">
                 <div id="placeholder_pizza">
@@ -584,7 +585,6 @@
                 </div>
             </div>
         </div>
-
 
     </div>
 
