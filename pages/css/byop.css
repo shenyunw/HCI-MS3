@@ -79,16 +79,17 @@ body {
 }
 
 .browse-pizza_half {
-    /*background: white;*/
-}
+ }
 
 .browse-pizza_description_half {
-    /*background: white;*/
     margin-top: 2em;
-    margin-bottom: 2em;
-    margin-left: 1em;
     margin-right: 3em;
-    width: 100%;
+    width: 22%;
+    float: left;
+}
+
+.browse-select-button-third {
+    padding-top: 11%;
 }
 
 #pizza_side {
