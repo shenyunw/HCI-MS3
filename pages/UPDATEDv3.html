@@ -91,6 +91,8 @@
         }
 
         .container-browse {
+            margin-left: 7%;
+            width: 122%;
             display: flex;
             background-image: url("images/cuttingboard.png");
         }
@@ -141,6 +143,7 @@
             background-repeat: no-repeat;
         }
 
+
         .store-menu-tab{
             background-color: #4cae4c;
             color:white;
@@ -149,9 +152,12 @@
         .user-created-tab{
             background-color: red;
             color:white;
+
         }
 
-
+    .browse{
+        margin-left:7%;
+    }
 
         /*span#placeholder_text {*/
         /*margin-top: 25%;*/
@@ -437,15 +443,18 @@
 
     <!--BROWSE PAGE-->
     <div class="slider" id="page-browse">
+        <div class="browse">
         <ul class="nav nav-tabs">
+
             <li class="active">
                 <a data-toggle="tab" href="#store" class="store-menu-tab">Our Menu</a>
             </li>
             <li>
                 <a data-toggle="tab" href="#user" class="user-created-tab">User Created</a>
             </li>
-        </ul>
 
+        </ul>
+        </div>
         <div class="tab-content">
             <div id="store" class="tab-pane fade in active">
                 <div class="container-browse store-menu">
