@@ -485,9 +485,7 @@
                              checkboxToggle('PepperoniCB');
                              checkboxToggle('MozzarellaCB');
                              checkboxToggle('PizzaSauceCB');
-                        //Move the page to the Build slide
-                        $('#site-body').slick('slickGoTo', 2);
-                             ">
+                             $('#site-body').slick('slickGoTo', 2)">
                     </div>
                 </div>
 
@@ -530,9 +528,7 @@
                         checkboxToggle('Green PeppersCB');
                         checkboxToggle('MozzarellaCB');
                         checkboxToggle('OlivesCB');
-                        //Move the page to the Build slide
-                        $('#site-body').slick('slickGoTo', 2);
-                        ">
+                        $('#site-body').slick('slickGoTo', 2)">
                                <!--onclick="selectButtonPress();">-->
 
 
@@ -580,11 +576,27 @@
                         Pizza for the lover of meats: <br>
                         <ul>
                             <li>Pepperoni</li>
-                            <li>Sausage</li>
+                            <li>Chicken</li>
                             <li>Bacon bits</li>
                             <li>Cheese</li>
                         </ul>
-                        <img class="pizza-select-button" onclick="selectButtonPress('pep-pizza');" src="images/toppings-pizzas-buttons-logo/leaf-button.png" alt="select button">
+
+                        <input type="image" alt=pizza-select-button" src="images/toppings-pizzas-buttons-logo/leaf-button.png"
+                               onclick="
+                             toggleTopping('Crust');
+                             toggleTopping('Pepperoni');
+                             toggleTopping('Chicken');
+                             toggleTopping('Bacon');
+                             toggleTopping('Mozzarella');
+                             toggleTopping('Pizza Sauce');
+
+                             checkboxToggle('CrustCB');
+                             checkboxToggle('PepperoniCB');
+                             checkboxToggle('ChickenCB');
+                             checkboxToggle('BaconCB');
+                             checkboxToggle('MozzarellaCB');
+                             checkboxToggle('Pizza SauceCB');
+                             $('#site-body').slick('slickGoTo', 2)">
                     </div>
                 </div>
 
@@ -601,7 +613,22 @@
                             <li>Chicken</li>
                             <li>Cheese</li>
                         </ul>
-                        <img class="pizza-select-button" onclick="selectButtonPress('veg-pizza');" src="images/toppings-pizzas-buttons-logo/leaf-button.png" alt="select button">
+
+                        <input type="image" alt=pizza-select-button" src="images/toppings-pizzas-buttons-logo/leaf-button.png"
+                               onclick="
+                             toggleTopping('Mushroom');
+                             toggleTopping('Chicken');
+                             toggleTopping('Crust');
+                             toggleTopping('Mozzarella');
+                             toggleTopping('Pizza Sauce');
+
+                             checkboxToggle('CrustCB');
+                             checkboxToggle('ChickenCB');
+                             checkboxToggle('MushroomsCB');
+                             checkboxToggle('MozzarellaCB');
+                             checkboxToggle('Pizza SauceCB');
+                             $('#site-body').slick('slickGoTo', 2)">
+
                         <fieldset class="starability-checkmark">
                             <legend>First rating:</legend>
                             <input type="radio" id="first-rate51" name="rating3" value="5"/>
