@@ -4,26 +4,15 @@
 <head>
     <!--LIBRARIES-->
     <link rel="stylesheet" type="text/css" href="libraries/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="libraries/textillate-master/assets/animate.css"/>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-
-    <!--download these sites to create local copy-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
-
-    <!--<link rel="stylesheet" type="text/css" href="libraries/textillate-master/assets/style.css"/> -->
-
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/starability-all.css"/>
     <link rel="stylesheet" type="text/css" href="libraries/slick/slick-theme.css"/>
+    <script type="text/javascript" src="libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="libraries/bootstrap.min.js"></script>
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="libraries/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="libraries/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="libraries/slick/slick.min.js"></script>
-    <script type="text/javascript" src="libraries/textillate-master/jquery.textillate.js"></script>
-    <script type="text/javascript" src="libraries/textillate-master/assets/jquery.lettering.js"></script>
-    <script type="text/javascript" src="libraries/textillate-master/assets/jquery.fittext.js"></script>
 
 
     <!--END LIBRARIES-->
@@ -32,60 +21,8 @@
 
     <link rel="stylesheet" type="text/css" href="css/byop.css"/>
 
+    <script type="text/javascript" src="javascript/byop-functions.js"></script>
     <script type="text/javascript">
-
-        // function for change the state of something when a button is clicked
-        function toggleTopping(id) {
-            var currentValue = document.getElementById(id).style.visibility;
-            if (!currentValue || currentValue == "hidden") {
-                document.getElementById(id).style.visibility = "visible";
-            } else {
-                document.getElementById(id).style.visibility = "hidden";
-            }
-        }
-
-        function selectButtonPress(id) {
-
-            if (id == "pep-pizza") {
-                toggleTopping('Crust');
-                toggleTopping('Mushrooms');
-                toggleTopping('Tomatoes');
-                toggleTopping('Spinach');
-                toggleTopping('Red Peppers');
-                toggleTopping('Green Pepper');
-                toggleTopping('Mozzarella');
-                toggleTopping('Olives');
-                toggleTopping('Pizza Sauce')
-            } else if (id == "veg-pizza") {
-                toggleTopping('Crust');
-                toggleTopping('Mushrooms');
-                toggleTopping('Tomatoes');
-                toggleTopping('Spinach');
-                toggleTopping('Red Peppers');
-                toggleTopping('Green Pepper');
-                toggleTopping('Mozzarella');
-                toggleTopping('Olives');
-            }
-        }
-
-
-    </script>
-
-    <script type="text/javascript">
-
-        function checkboxToggle(id) {
-            if (document.getElementById(id).checked == true) {
-                document.getElementById(id).checked = false;
-            } else {
-                document.getElementById(id).checked = true;
-            }
-        }
-
-
-    </script>
-
-    <script type="text/javascript">
-
         $(document).ready(function () {
 
 
@@ -189,15 +126,13 @@
             });
 
         });
-
     </script>
 </head>
 <body>
 
 
 <nav id="navbar-container" class="navbar navbar-default navbar-inverse">
-    <div class="contact-info"><span class="_glyphicon _glyphicon-home"></span> 123 Rainbow Road | <span
-            class="_glyphicon _glyphicon-earphone"></span> 555-555-5555
+    <div class="contact-info"><span></span> 123 Rainbow Road | <span>555-555-5555</span>
     </div>
     <div class="container-fluid">
         <div class="navbar-header">
@@ -372,7 +307,6 @@
                         checkboxToggle('MozzarellaCB');
                         checkboxToggle('OlivesCB');
                         $('#site-body').slick('slickGoTo', 2)">
-                        <!--onclick="selectButtonPress();">-->
 
 
                         <fieldset class="starability-checkmark">
