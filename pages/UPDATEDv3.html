@@ -12,7 +12,7 @@
 
 
     <!--download these sites to create local copy-->
-    <script type="text/javascript" src="http://gc.kis.scr.kaspersky-labs.com/1B74BD89-2A22-4B93-B451-1C9E1052A0EC/main.js" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!--<link rel="stylesheet" type="text/css" href="libraries/textillate-master/assets/style.css"/> -->
@@ -36,6 +36,7 @@
 
         body {
             background-image: url("images/background.jpg");
+            background-size: cover;
         }
 
         #workplace {
@@ -96,11 +97,8 @@
         }
 
         .container-browse {
-            margin-left: 7%;
-            width: 121%;
             display: flex;
-            background-image: url(images/cuttingboard.png);
-            background-repeat: no-repeat;
+            width: 100%;
         }
         .container-browse img{
             padding-top:10px;
@@ -118,10 +116,7 @@
 
         .browse-pizza_description_half {
             /*background: white;*/
-            margin-top: 2em;
-            margin-bottom: 2em;
-            margin-left: 1em;
-            margin-right: 3em;
+            margin: 2em 3em 2em 1em;
             width: 100%;
         }
 
@@ -250,6 +245,14 @@
 
         }
 
+        #page-orders {
+            overflow: scroll;
+        }
+
+        .pizza-orders {
+
+        }
+
         .button1{
             text-align:center;
         }
@@ -372,7 +375,8 @@
                 fade: true,
                 speed: 450,
                 infinite: true,
-                cssEase: 'linear'
+                cssEase: 'linear',
+                adaptiveHeight: true
             });
 
             //$('#nav-login').slick({vertical: true});
@@ -550,7 +554,10 @@
         </div>
         <div class="tab-content">
             <div id="store" class="tab-pane fade in active">
-                <div class="container-browse store-menu">
+                <div class="container-browse">
+                    <div class="browse-pizza-background">
+                        <img class="pizza_side-background" src="images/cuttingboard.png" alt="Cuttingboard">
+                    </div>
                     <div class="browse-pizza_half">
                         <img class="media-object" src="images/toppings-pizzas-buttons-logo/pepperonipizza.png"
                              alt="pepperoni pizza">
@@ -597,7 +604,10 @@
                 </div>
 
 
-                <div class="container-browse">
+                <div class="container-browse store-menu">
+                    <div class="browse-pizza-background">
+                        <img class="pizza_side-background" src="images/cuttingboard.png" alt="Cuttingboard">
+                    </div>
                     <div class="browse-pizza_half">
                         <img class="media-object" src="images/toppings-pizzas-buttons-logo/vegetarian.png"
                              alt="vegetarian pizza">
@@ -670,6 +680,9 @@
             <!--START CUSTOM MENU CONTAINER-->
             <div id="user" class="tab-pane fade">
                 <div class="container-browse user-created-tab">
+                    <div class="browse-pizza-background">
+                        <img class="pizza_side-background" src="images/cuttingboard.png" alt="Cuttingboard">
+                    </div>
                     <div class="browse-pizza_half">
                         <img class="media-object" src="images/toppings-pizzas-buttons-logo/meatlover.png"
                              alt="meat lover pizza">
@@ -725,6 +738,9 @@
                 </div>
 
                 <div class="container-browse">
+                    <div class="browse-pizza-background">
+                        <img class="pizza_side-background" src="images/cuttingboard.png" alt="Cuttingboard">
+                    </div>
                     <div class="browse-pizza_half">
                         <img class="media-object" src="images/toppings-pizzas-buttons-logo/mushroomchicken.png"
                              alt="mushroom chicken pizza">
