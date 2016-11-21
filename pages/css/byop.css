@@ -66,6 +66,7 @@ body {
     width: 121%;
     display: flex;
     background-image: url(../images/cuttingboard.png);
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
