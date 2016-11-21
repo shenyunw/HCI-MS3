@@ -57,8 +57,6 @@
         }
 
         .toppings_container {
-
-            width: 650px;
             display: flex;
             background: white;
         }
@@ -107,7 +105,7 @@
         .tab-content {
             display: flex;
             margin-left: 5%;
-            width: 40%;
+            width: 33%;
         }
 
         .browse-pizza_half {
@@ -124,8 +122,12 @@
         }
 
         #pizza_side {
-            width: 50%;
+            width: 33%;
             height: 100%;
+        }
+
+        #pizza_complete_side {
+            width:33%;
         }
 
         #placeholder_pizza {
@@ -327,6 +329,8 @@
 
         $(document).ready(function () {
 
+
+
             //$('#nav-login').slick({vertical: true});
             $('#site-body').slick({
                 draggable: false,
@@ -368,6 +372,16 @@
             $('page-advertisements').slick({draggable: false});
 
 
+            /*
+             home 0
+             browse 1
+             build 2
+             login 3
+             employee 4
+             trans 5
+             signup 6
+             */
+
             $('#nav-home').on('click', function () {
 
                 $('#site-body').slick('slickGoTo', 0);
@@ -388,7 +402,7 @@
 
             $('#nav-cart').on('click', function () {
 
-                $('#site-body').slick('slickGoTo', 4);
+                $('#site-body').slick('slickGoTo', 5);
             });
 
 
@@ -839,11 +853,15 @@
                          src="images/toppings-pizzas-buttons-logo/toppings/spinach.png">
                 </div>
             </div>
+            <div id="pizza_complete_side">
+
+                <h1>PIZZA COMPLETE? CLICK TO CONTINUE</h1>
+                <img src="images/logo.jpg" onclick="$('#site-body').slick('slickGoTo', 5);" alt="READY GO">
+            </div>
         </div>
         </div>
 
     </div>
-
 
     <!--CUSTOMER LOG IN PAGE-->
     <div class="slider" id="page-login">
@@ -868,7 +886,6 @@
     <!--EMPLOYEE LOGIN PAGE-->
     <div class="slider" id="page-employee">
 
-
         <form>
 
             <div class="loginbox">
@@ -890,7 +907,6 @@
     <div class="slider" id="page-transaction">
         <p>Transactions</p>
     </div>
-
 
     <!--SIGN UP PAGE-->
     <div class="slider" id="signup">
