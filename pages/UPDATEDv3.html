@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -11,7 +12,7 @@
 
 
     <!--download these sites to create local copy-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://gc.kis.scr.kaspersky-labs.com/1B74BD89-2A22-4B93-B451-1C9E1052A0EC/main.js" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!--<link rel="stylesheet" type="text/css" href="libraries/textillate-master/assets/style.css"/> -->
@@ -35,7 +36,6 @@
 
         body {
             background-image: url("images/background.jpg");
-            background-size: cover;
         }
 
         #workplace {
@@ -92,7 +92,11 @@
         }
 
         .container-browse {
+            margin-left: 7%;
+            width: 121%;
             display: flex;
+            background-image: url(images/cuttingboard.png);
+            background-repeat: no-repeat;
         }
         .container-browse img{
             padding-top:10px;
@@ -159,7 +163,7 @@
         }
 
         .browse{
-            margin-left:15%;
+            margin-right:60%;
         }
 
         .nav-tabs {
@@ -930,18 +934,18 @@
     <!--EMPLOYEE LOGIN PAGE-->
     <div class="slider" id="page-employee">
 
-            <div class="loginbox">
-                <p align="center"><span style="color: white; ">Employee Login</span></p><br>
-                <span style="color: black; ">
+        <div class="loginbox">
+            <p align="center"><span style="color: white; ">Employee Login</span></p><br>
+            <span style="color: black; ">
                     <label>Username</label>
                     <input type="text" placeholder="Enter Username" name="uname"><br><br>
                     <label>Password</label>
                     <input type="password" placeholder="Enter Password" name="psw"><br><br>
                 </span>
-                <div class="button1">
-                    <button onclick="$('#site-body').slick('slickGoTo', 7); return true;" type="submit">Login</button>
-                </div>
+            <div class="button1">
+                <button onclick="$('#site-body').slick('slickGoTo', 7); return true;" type="submit">Login</button>
             </div>
+        </div>
     </div>
 
     <!--TRANSACTION PAGE-->
