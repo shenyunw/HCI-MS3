@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -62,10 +60,11 @@
             background: white;
         }
 
-        .build{
+        .build {
             margin-right: 10%;
             margin-left: 10%;
         }
+
         /*#pizza-topping-tabs, .nav-tabs {*/
         /*background-color: white !important;*/
         /*color: black;*/
@@ -87,7 +86,6 @@
             padding-left: 8%;
         }
 
-
         #navbar-container {
             padding-top: 2%;
             padding-bottom: 2%;
@@ -102,11 +100,11 @@
             background-image: url(images/cuttingboard.png);
             background-repeat: no-repeat;
         }
-        .container-browse img{
-            padding-top:10px;
-            padding-left:5px;
-        }
 
+        .container-browse img {
+            padding-top: 10px;
+            padding-left: 5px;
+        }
 
         .tab-content {
             display: flex;
@@ -127,13 +125,12 @@
 
         #pizza_side {
             height: 100%;
-            float:left;
+            float: left;
         }
 
         #pizza_complete_side {
-            float:left;
+            float: left;
         }
-
 
         .placeholder_pizza {
             border-radius: 50px;
@@ -157,73 +154,73 @@
             background-repeat: no-repeat;
         }
 
-        .store-menu-tab{
+        .store-menu-tab {
             background-color: #4cae4c;
-            color:white;
+            color: white;
         }
 
-        .user-created-tab{
-            background-color:black;
-            color:white;
+        .user-created-tab {
+            background-color: black;
+            color: white;
         }
 
-        .browse{
-            margin-right:60%;
+        .browse {
+            margin-right: 60%;
         }
 
         .nav-tabs {
             padding-left: 20%;
         }
 
-        .buildtab{
-            padding-left:0%;
+        .buildtab {
+            padding-left: 0%;
         }
 
         /*TAB COLORS FOR BUILD PAGE*/
-        #tab-dough{
+        #tab-dough {
             background-color: #ecb43c;
         }
 
-        #dough{
+        #dough {
             padding-left: 5%;
             width: 300px;
             background-color: white;
         }
 
-        #tab-cheese{
+        #tab-cheese {
             text-decoration-color: white;
             background-color: #4c0404;
         }
 
-        #cheese{
+        #cheese {
             width: 300px;
             padding-left: 5%;
             background-color: white;
         }
 
-        #tab-meat{
+        #tab-meat {
             background-color: #ecb43c;
         }
 
-        #meat{
+        #meat {
             padding-left: 5%;
             width: 300px;
             background-color: white;
         }
 
-        #tab-other{
+        #tab-other {
             background-color: #4c0404;
         }
 
-        #other{
+        #other {
             padding-left: 5%;
             width: 300px;
             background-color: white;
         }
 
-        .checkoutbutton img{
+        .checkoutbutton img {
             margin-top: 80%
-            width:80%;
+            width: 80%;
         }
 
         /*END TAB COLORS FOR BUILD PAGE*/
@@ -250,11 +247,11 @@
 
         }
 
-        .button1{
-            text-align:center;
+        .button1 {
+            text-align: center;
         }
 
-        .signtext{
+        .signtext {
             margin-right: 10%;
         }
 
@@ -271,7 +268,7 @@
             border-bottom-color: #080808;
         }
 
-        .transaction-box{
+        .transaction-box {
             width: 34em;
             margin-left: 35%;
             margin-top: 5%;
@@ -279,7 +276,7 @@
             padding: 16px;
             overflow: hidden;
             text-align: right;
-            color:white !important;
+            color: white !important;
         }
 
         .loginbox {
@@ -290,7 +287,7 @@
             padding: 16px;
             overflow: hidden;
             text-align: right;
-            color:white !important;
+            color: white !important;
         }
 
         .signupbox {
@@ -306,6 +303,8 @@
 
 
     </style>
+
+    <link rel="stylesheet" type="text/css" href="libraries/slick/slick.css"/>
 
     <script type="text/javascript">
 
@@ -348,11 +347,11 @@
 
     <script type="text/javascript">
 
-        function checkboxToggle(id){
-            if (document.getElementById(id).checked ==true){
-                document.getElementById(id).checked =false;
-            } else{
-                document.getElementById(id).checked =true;
+        function checkboxToggle(id) {
+            if (document.getElementById(id).checked == true) {
+                document.getElementById(id).checked = false;
+            } else {
+                document.getElementById(id).checked = true;
             }
         }
 
@@ -470,8 +469,6 @@
 <body>
 
 
-
-
 <nav id="navbar-container" class="navbar navbar-default navbar-inverse">
     <div class="contact-info"><span class="_glyphicon _glyphicon-home"></span> 123 Rainbow Road | <span
             class="_glyphicon _glyphicon-earphone"></span> 555-555-5555
@@ -577,7 +574,8 @@
                             <li>Cheese</li>
                         </ul>
 
-                        <input type="image" alt=pizza-select-button" src="images/toppings-pizzas-buttons-logo/leaf-button.png"
+                        <input type="image" alt=pizza-select-button"
+                               src="images/toppings-pizzas-buttons-logo/leaf-button.png"
                                onclick="
                              toggleTopping('Crust');
                              toggleTopping('Pepperoni');
@@ -615,7 +613,8 @@
                             <li>Black Olives</li>
                             <li>Cheese</li>
                         </ul>
-                        <input type="image" alt=pizza-select-button" src="images/toppings-pizzas-buttons-logo/leaf-button.png"
+                        <input type="image" alt=pizza-select-button"
+                               src="images/toppings-pizzas-buttons-logo/leaf-button.png"
                                onclick="
                         toggleTopping('Crust');
                         toggleTopping('Pizza Sauce');
@@ -699,7 +698,8 @@
                             <li>Cheese</li>
                         </ul>
 
-                        <input type="image" alt=pizza-select-button" src="images/toppings-pizzas-buttons-logo/leaf-button.png"
+                        <input type="image" alt=pizza-select-button"
+                               src="images/toppings-pizzas-buttons-logo/leaf-button.png"
                                onclick="
                              toggleTopping('Crust');
                              toggleTopping('Pepperoni');
@@ -739,7 +739,8 @@
                             <li>Cheese</li>
                         </ul>
 
-                        <input type="image" alt=pizza-select-button" src="images/toppings-pizzas-buttons-logo/leaf-button.png"
+                        <input type="image" alt=pizza-select-button"
+                               src="images/toppings-pizzas-buttons-logo/leaf-button.png"
                                onclick="
                              toggleTopping('Mushroom');
                              toggleTopping('Chicken');
@@ -804,33 +805,40 @@
                 <div class="tab-content">
                     <div id="dough" class="topping tab-pane fade in active">
                         <h3>Choose your dough & sauces:</h3>
-                        <input type="checkbox" id="CrustCB" value="Crust" onclick="toggleTopping('Crust'); toggleTopping('CrustT');">
+                        <input type="checkbox" id="CrustCB" value="Crust"
+                               onclick="toggleTopping('Crust'); toggleTopping('CrustT');">
                         Regular Crust<br>
-                        <input type="checkbox" id="PizzaSauceCB" value="Pizza Sauce" onclick="toggleTopping('Pizza Sauce'); toggleTopping('Pizza SauceT')">
+                        <input type="checkbox" id="PizzaSauceCB" value="Pizza Sauce"
+                               onclick="toggleTopping('Pizza Sauce'); toggleTopping('Pizza SauceT')">
                         Regular Sauce<br>
                         <input type="checkbox" id="BBQSauceCB" value="Crust" onclick="toggleTopping('BBQSauce');">
                         BBQ Sauce<br>
                     </div>
                     <div id="cheese" class="topping tab-pane fade">
                         <h3>Choose your cheese:</h3>
-                        <input type="checkbox" id="CheddarCB" value="Cheddar" onclick="toggleTopping('Cheddar'); toggleTopping('CheddarT');"> Cheddar<br>
-                        <input type="checkbox" id="MozzarellaCB" value="Mozzarella" onclick="toggleTopping('Mozzarella'); toggleTopping('MozzarellaT');"> Mozzarella<br>
+                        <input type="checkbox" id="CheddarCB" value="Cheddar"
+                               onclick="toggleTopping('Cheddar'); toggleTopping('CheddarT');"> Cheddar<br>
+                        <input type="checkbox" id="MozzarellaCB" value="Mozzarella"
+                               onclick="toggleTopping('Mozzarella'); toggleTopping('MozzarellaT');"> Mozzarella<br>
                     </div>
                     <div id="meat" class="topping tab-pane fade">
                         <h3>Choose your meats:</h3>
-                        <input type="checkbox" id="PepperoniCB" value="Pepperoni" onclick="toggleTopping('Pepperoni'); toggleTopping('PepperoniT');">
+                        <input type="checkbox" id="PepperoniCB" value="Pepperoni"
+                               onclick="toggleTopping('Pepperoni'); toggleTopping('PepperoniT');">
                         Pepperoni
                         <img class="topping-icon"
                              src="images/toppings-pizzas-buttons-logo/topping%20buttons/pepperoni-icon.png"
                              alt="pepperoni.png"/><br>
 
-                        <input type="checkbox" id="ChickenCB" value="Chicken" onclick="toggleTopping('Chicken'); toggleTopping('ChickenT');">
+                        <input type="checkbox" id="ChickenCB" value="Chicken"
+                               onclick="toggleTopping('Chicken'); toggleTopping('ChickenT');">
                         Chicken
                         <img class="topping-icon"
                              src="images/toppings-pizzas-buttons-logo/topping%20buttons/chicken-icon.png"
                              alt="chicken.png"/><br>
 
-                        <input type="checkbox" id="BaconCB" value="Bacon" onclick="toggleTopping('Bacon'); toggleTopping('BaconT');">
+                        <input type="checkbox" id="BaconCB" value="Bacon"
+                               onclick="toggleTopping('Bacon'); toggleTopping('BaconT');">
                         Bacon
                         <img class="topping-icon"
                              src="images/toppings-pizzas-buttons-logo/topping%20buttons/baconbits-icon.png"
@@ -839,42 +847,50 @@
                     </div>
                     <div id="other" class="topping tab-pane fade">
                         <h3>Choose your other toppings:</h3>
-                        <input type="checkbox" id="MushroomsCB" value="Mushrooms" onclick="toggleTopping('Mushrooms'); toggleTopping('MushroomsT');"> Mushrooms
+                        <input type="checkbox" id="MushroomsCB" value="Mushrooms"
+                               onclick="toggleTopping('Mushrooms'); toggleTopping('MushroomsT');"> Mushrooms
                         <img class="topping-icon"
                              src="images/toppings-pizzas-buttons-logo/topping%20buttons/mushroom-icon.png"
                              alt="mushroom.png"/><br>
 
-                        <input type="checkbox" id="Green PeppersCB" value="Green Peppers" onclick="toggleTopping('Green Pepper'); toggleTopping('Green PepperT');"> Green Peppers
+                        <input type="checkbox" id="Green PeppersCB" value="Green Peppers"
+                               onclick="toggleTopping('Green Pepper'); toggleTopping('Green PepperT');"> Green Peppers
                         <img class="topping-icon"
                              src="images/toppings-pizzas-buttons-logo/topping%20buttons/pepper-icon.png"
                              alt="pepper.png"/><br>
 
-                        <input type="checkbox" id="Red PeppersCB" value="Red Peppers" onclick="toggleTopping('Red Peppers'); toggleTopping('Red PeppersT');"> Red Peppers
+                        <input type="checkbox" id="Red PeppersCB" value="Red Peppers"
+                               onclick="toggleTopping('Red Peppers'); toggleTopping('Red PeppersT');"> Red Peppers
                         <img class="topping-icon"
                              src="images/toppings-pizzas-buttons-logo/topping%20buttons/redpepper-icon.png"
                              alt="red pepper.png"/><br>
 
-                        <input type="checkbox" id="OlivesCB" value="Olives" onclick="toggleTopping('Olives'); toggleTopping('OlivesT');"> Olives
+                        <input type="checkbox" id="OlivesCB" value="Olives"
+                               onclick="toggleTopping('Olives'); toggleTopping('OlivesT');"> Olives
                         <img class="topping-icon"
                              src="images/toppings-pizzas-buttons-logo/topping%20buttons/olive-icon.png"
                              alt="olive.png"/><br>
 
-                        <input type="checkbox" id="SashimiCB" value="Sashimi" onclick="toggleTopping('Sashimi'); toggleTopping('SashimiT');"> Sashimi
+                        <input type="checkbox" id="SashimiCB" value="Sashimi"
+                               onclick="toggleTopping('Sashimi'); toggleTopping('SashimiT');"> Sashimi
                         <img class="topping-icon"
                              src="images/toppings-pizzas-buttons-logo/topping%20buttons/sashimi-icon.png"
                              alt="sashimi.png"/><br>
 
-                        <input type="checkbox" id="ShrimpCB" value="Shrimp" onclick="toggleTopping('Shrimp'); toggleTopping('ShrimpT');"> Shrimp
+                        <input type="checkbox" id="ShrimpCB" value="Shrimp"
+                               onclick="toggleTopping('Shrimp'); toggleTopping('ShrimpT');"> Shrimp
                         <img class="topping-icon"
                              src="images/toppings-pizzas-buttons-logo/topping%20buttons/shrimp-icon.png"
                              alt="shrimp.png"/><br>
 
-                        <input type="checkbox" id="TomatoesCB" value="Tomatoes" onclick="toggleTopping('Tomatoes'); toggleTopping('TomatoesT');"> Tomatoes
+                        <input type="checkbox" id="TomatoesCB" value="Tomatoes"
+                               onclick="toggleTopping('Tomatoes'); toggleTopping('TomatoesT');"> Tomatoes
                         <img class="topping-icon"
                              src="images/toppings-pizzas-buttons-logo/topping%20buttons/tomato-icon.png"
                              alt="tomatoes.png"/><br>
 
-                        <input type="checkbox" id="SpinachCB" value="Spinach" onclick="toggleTopping('Spinach'); toggleTopping('SpinachT');"> Spinach
+                        <input type="checkbox" id="SpinachCB" value="Spinach"
+                               onclick="toggleTopping('Spinach'); toggleTopping('SpinachT');"> Spinach
                         <img class="topping-icon"
                              src="images/toppings-pizzas-buttons-logo/topping%20buttons/spinach-icon.png"
                              alt="spinach.png"/><br>
@@ -922,8 +938,9 @@
                 <div id="pizza_complete_side">
 
                     <h1>Place Order</h1>
-                    <div class = "checkoutbutton">
-                    <img src="images/checkoutbutton.png" onclick="$('#site-body').slick('slickGoTo', 5);" alt="READY GO">
+                    <div class="checkoutbutton">
+                        <img src="images/checkoutbutton.png" onclick="$('#site-body').slick('slickGoTo', 5);"
+                             alt="READY GO">
                     </div>
                 </div>
             </div>
@@ -1035,8 +1052,8 @@
         <form>
             <div class="signupbox">
                 <p align="center"><font size="5%" color="white">Sign Up</font></p><br>
-                <font color = "white">
-                    <div class = "signtext">
+                <font color="white">
+                    <div class="signtext">
                         <label>First Name</label>
                         <input type="text" name="firstname" required><br><br>
                         <label>Last Name</label>
@@ -1046,7 +1063,7 @@
                         <label>Postal Code</label>
                         <input type="text" placeholder="i.e. R1R1R1 or R1R 1R1" name="postalCode" required><br><br>
                         <label>Phone Number</label>
-                        <input type="text" placeholder = "(area code)" name="firstname" required><br><br><br>
+                        <input type="text" placeholder="(area code)" name="firstname" required><br><br><br>
                         <label>Email Address</label>
                         <input type="text" name="email" required><br><br>
                         <label>Username</label>
@@ -1066,9 +1083,7 @@
     <!--ORDERS PAGE-->
     <div class="slider" id="page-orders">
         <img class="pizza-orders" src="images/mock-orders/orderpage-1.png" alt="Order 1">
-        <img class="pizza-orders" src="images/mock-orders/orderpage-2.png" alt="Order 2">
         <img class="pizza-orders" src="images/mock-orders/orderpage-3.png" alt="Order 3">
-        <img class="pizza-orders" src="images/mock-orders/orderpage-4.png" alt="Order 4">
     </div>
 
 </div>

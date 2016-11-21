@@ -11,18 +11,14 @@
 
   function isInEffect (effect) {
     return /In/.test(effect) || $.inArray(effect, $.fn.textillate.defaults.inEffects) >= 0;
-  };
-
+  }
   function isOutEffect (effect) {
     return /Out/.test(effect) || $.inArray(effect, $.fn.textillate.defaults.outEffects) >= 0;
-  };
-
-
+  }
   function stringToBoolean(str) {
     if (str !== "true" && str !== "false") return str;
     return (str === "true");
-  };
-
+  }
   // custom get data api method
   function getData (node) {
     var attrs = node.attributes || []
@@ -41,7 +37,7 @@
       } else if (/^data-*/.test(nodeName)) {
         data[nodeName.replace(/data-/, '')] = stringToBoolean(attr.nodeValue);
       }
-    })
+    });
 
     return data;
   }
@@ -93,8 +89,7 @@
         setTimeout(function () { animate($token, options.effect, complete) }, delay) :
         complete();
     });
-  };
-
+  }
   var Textillate = function (element, options) {
     var base = this
       , $element = $(element);
@@ -190,7 +185,7 @@
     base.out = function (cb) {
       var $elem = base.$texts.find(':nth-child(' + ((base.currentIndex||0) + 1) + ')')
         , $tokens = base.$current.find('[class^="' + base.options.type + '"]')
-        , options = $.extend(true, {}, base.options, $elem.length ? getData($elem[0]) : {})
+        , options = $.extend(true, {}, base.options, $elem.length ? getData($elem[0]) : {});
 
       base.triggerEvent('outAnimationBegin');
 
@@ -238,7 +233,7 @@
     };
 
     base.init();
-  }
+  };
 
   $.fn.textillate = function (settings, args) {
     return this.each(function () {
