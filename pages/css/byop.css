@@ -251,7 +251,7 @@ button {
     background: #ab2f2f;
     padding: 16px;
     overflow: hidden;
-    text-align: right;
+    text-align: center;
     color: white !important;
 }
 
@@ -281,4 +281,8 @@ a.user-created-tab {
 
 input {
     color: black;
+}
+
+ul a {
+   color: white;
 }
