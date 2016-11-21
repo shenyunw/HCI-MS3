@@ -92,10 +92,7 @@
         }
 
         .container-browse {
-            margin-left: 7%;
-            width: 122%;
             display: flex;
-            background-image: url("images/cuttingboard.png");
         }
         .container-browse img{
             padding-top:10px;
@@ -105,8 +102,6 @@
 
         .tab-content {
             display: flex;
-            margin-left: 5%;
-            width: 33%;
         }
 
         .browse-pizza_half {
@@ -131,7 +126,7 @@
             float:left;
         }
 
-        #placeholder_pizza {
+        .placeholder_pizza {
             border-radius: 50px;
             z-index: 1;
             position: absolute;
@@ -143,7 +138,7 @@
             visibility: hidden;
         }
 
-        img#pizza_side-background {
+        img.pizza_side-background {
             height: 321px;
             width: 328px;
         }
@@ -398,6 +393,7 @@
              employee 4
              trans 5
              signup 6
+             order page 7
              */
 
             $('#nav-home').on('click', function () {
@@ -865,8 +861,8 @@
 
 
                 <div id="pizza_side">
-                    <img id="pizza_side-background" src="images/cuttingboard.png" alt="Cuttingboard">
-                    <div id="placeholder_pizza">
+                    <img class="pizza_side-background" src="images/cuttingboard.png" alt="Cuttingboard">
+                    <div class="placeholder_pizza">
                         <img class="buildImage" id="Crust"
                              src="images/toppings-pizzas-buttons-logo/toppings/crust.png">
                         <img class="buildImage" id="Pizza Sauce"
@@ -934,21 +930,18 @@
     <!--EMPLOYEE LOGIN PAGE-->
     <div class="slider" id="page-employee">
 
-        <form>
-
             <div class="loginbox">
-                <p align="center"><font size="5%" color="white">Employee Login</font></p><br>
-                <font color="white">
+                <p align="center"><span style="color: white; ">Employee Login</span></p><br>
+                <span style="color: black; ">
                     <label>Username</label>
-                    <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+                    <input type="text" placeholder="Enter Username" name="uname"><br><br>
                     <label>Password</label>
-                    <input type="password" placeholder="Enter Password" name="psw" required><br><br>
-                </font>
+                    <input type="password" placeholder="Enter Password" name="psw"><br><br>
+                </span>
                 <div class="button1">
-                    <button type="submit">Login</button>
+                    <button onclick="$('#site-body').slick('slickGoTo', 7); return true;" type="submit">Login</button>
                 </div>
             </div>
-        </form>
     </div>
 
     <!--TRANSACTION PAGE-->
@@ -973,9 +966,9 @@
             </div>
         </form>
 
-        <div id="transaction-pizza-side">
-            <img id="transaction-side-background" src="images/cuttingboard.png" alt="Cuttingboard">
-            <div id="transaction-placeholder-pizza">
+        <div id="transaction-pizza-side" style="position: relative;">
+            <img class="pizza_side-background" src="images/cuttingboard.png" alt="Cuttingboard">
+            <div class="placeholder_pizza" style="top:0;">
                 <img class="buildImage" id="CrustT"
                      src="images/toppings-pizzas-buttons-logo/toppings/crust.png">
                 <img class="buildImage" id="Pizza SauceT"
@@ -1043,6 +1036,15 @@
                 </div>
             </div>
         </form>
+    </div>
+
+
+    <!--ORDERS PAGE-->
+    <div class="slider" id="page-orders">
+        <img class="pizza-orders" src="images/mock-orders/orderpage-1.png" alt="Order 1">
+        <img class="pizza-orders" src="images/mock-orders/orderpage-2.png" alt="Order 2">
+        <img class="pizza-orders" src="images/mock-orders/orderpage-3.png" alt="Order 3">
+        <img class="pizza-orders" src="images/mock-orders/orderpage-4.png" alt="Order 4">
     </div>
 
 </div>
