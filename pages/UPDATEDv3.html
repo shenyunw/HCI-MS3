@@ -35,7 +35,8 @@
                 speed: 450,
                 infinite: true,
                 cssEase: 'linear',
-                adaptiveHeight: true
+                adaptiveHeight: true,
+                centerMode: true
             });
 
             //$('#nav-login').slick({vertical: true});
@@ -124,7 +125,8 @@
 
                 $('#site-body').slick('slickGoTo', 6);
             });
-
+            toggleTopping('Crust');
+            toggleTopping('CrustT');
         });
     </script>
 </head>
@@ -242,17 +244,17 @@
                         <input type="image" alt=pizza-select-button"
                                src="images/toppings-pizzas-buttons-logo/leaf-button.png"
                                onclick="
-                             toggleTopping('Crust');
+//                             toggleTopping('Crust');
                              toggleTopping('Pepperoni');
                              toggleTopping('Mozzarella');
                              toggleTopping('Pizza Sauce');
 
-                             toggleTopping('CrustT');
+//                             toggleTopping('CrustT');
                              toggleTopping('PepperoniT');
                              toggleTopping('MozzarellaT');
                              toggleTopping('Pizza SauceT');
 
-                             checkboxToggle('CrustCB');
+//                             checkboxToggle('CrustCB');
                              checkboxToggle('PepperoniCB');
                              checkboxToggle('MozzarellaCB');
                              checkboxToggle('PizzaSauceCB');
@@ -299,7 +301,7 @@
                         <input type="image" alt=pizza-select-button"
                                src="images/toppings-pizzas-buttons-logo/leaf-button.png"
                                onclick="
-                        toggleTopping('Crust');
+//                        toggleTopping('Crust');
                         toggleTopping('Pizza Sauce');
                         toggleTopping('Mushrooms');
                         toggleTopping('Tomatoes');
@@ -309,7 +311,7 @@
                         toggleTopping('Mozzarella');
                         toggleTopping('Olives');
 
-                        toggleTopping('CrustT');
+//                        toggleTopping('CrustT');
                         toggleTopping('Pizza SauceT');
                         toggleTopping('MushroomsT');
                         toggleTopping('TomatoesT');
@@ -319,7 +321,7 @@
                         toggleTopping('MozzarellaT');
                         toggleTopping('OlivesT');
 
-                        checkboxToggle('CrustCB');
+//                        checkboxToggle('CrustCB');
                         checkboxToggle('PizzaSauceCB');
                         checkboxToggle('MushroomsCB');
                         checkboxToggle('TomatoesCB');
@@ -372,21 +374,21 @@
                         <input type="image" alt=pizza-select-button"
                                src="images/toppings-pizzas-buttons-logo/leaf-button.png"
                                onclick="
-                             toggleTopping('Crust');
+//                             toggleTopping('Crust');
                              toggleTopping('Pepperoni');
                              toggleTopping('Chicken');
                              toggleTopping('Bacon');
                              toggleTopping('Mozzarella');
                              toggleTopping('Pizza Sauce');
 
-                             toggleTopping('CrustT');
+//                             toggleTopping('CrustT');
                              toggleTopping('PepperoniT');
                              toggleTopping('ChickenT');
                              toggleTopping('BaconT');
                              toggleTopping('MozzarellaT');
                              toggleTopping('Pizza SauceT');
 
-                             checkboxToggle('CrustCB');
+//                             checkboxToggle('CrustCB');
                              checkboxToggle('PepperoniCB');
                              checkboxToggle('ChickenCB');
                              checkboxToggle('BaconCB');
@@ -432,17 +434,17 @@
                                onclick="
                              toggleTopping('Mushroom');
                              toggleTopping('Chicken');
-                             toggleTopping('Crust');
+//                             toggleTopping('Crust');
                              toggleTopping('Mozzarella');
                              toggleTopping('Pizza Sauce');
 
                              toggleTopping('MushroomT');
                              toggleTopping('ChickenT');
-                             toggleTopping('CrustT');
+//                             toggleTopping('CrustT');
                              toggleTopping('MozzarellaT');
                              toggleTopping('Pizza SauceT');
 
-                             checkboxToggle('CrustCB');
+//                             checkboxToggle('CrustCB');
                              checkboxToggle('ChickenCB');
                              checkboxToggle('MushroomsCB');
                              checkboxToggle('MozzarellaCB');
@@ -479,14 +481,11 @@
             <div class="toppings_container">
                 <div class="tab-content">
                     <div id="dough" class="topping tab-pane fade in active">
-                        <h3>Choose your dough & sauces:</h3>
-                        <input type="checkbox" id="CrustCB" value="Crust"
-                               onclick="toggleTopping('Crust'); toggleTopping('CrustT');">
-                        Regular Crust<br>
+                        <h3>Choose your sauces:</h3>
                         <input type="checkbox" id="PizzaSauceCB" value="Pizza Sauce"
                                onclick="toggleTopping('Pizza Sauce'); toggleTopping('Pizza SauceT')">
                         Regular Sauce<br>
-                        <input type="checkbox" id="BBQSauceCB" value="Crust" onclick="toggleTopping('BBQSauce');">
+                        <input type="checkbox" id="BBQSauceCB" value="BBQSauce" onclick="toggleTopping('BBQSauce');">
                         BBQ Sauce<br>
                     </div>
                     <div id="cheese" class="topping tab-pane fade">
