@@ -61,10 +61,10 @@
             background: white;
         }
 
-        #pizza-topping-tabs, .nav-tabs {
-            background-color: white !important;
-            color: black;
-        }
+        /*#pizza-topping-tabs, .nav-tabs {*/
+            /*background-color: white !important;*/
+            /*color: black;*/
+        /*}*/
 
         .navbar-brand > img {
             max-width: 5%;
@@ -92,7 +92,9 @@
 
         .container-browse {
             display: flex;
+            background-image: url("images/cuttingboard.png");
         }
+
 
         .tab-content {
             display: flex;
@@ -100,11 +102,15 @@
         }
 
         .browse-pizza_half {
-            background: white;
+            /*background: white;*/
         }
 
         .browse-pizza_description_half {
-            background: white;
+            /*background: white;*/
+            margin-top: 2em;
+            margin-bottom: 2em;
+            margin-left: 1em;
+            margin-right: 3em;
             width: 100%;
         }
 
@@ -117,7 +123,7 @@
             border-radius: 50px;
             z-index: 1;
             position: absolute;
-            top: 0;
+            top: 12%; <!--was 0-->
         }
 
         .buildImage {
@@ -134,6 +140,18 @@
             background-image: url(images/cuttingboard.png) !important;
             background-repeat: no-repeat;
         }
+
+        .store-menu-tab{
+            background-color: #4cae4c;
+            color:white;
+        }
+
+        .user-created-tab{
+            background-color: red;
+            color:white;
+        }
+
+
 
         /*span#placeholder_text {*/
         /*margin-top: 25%;*/
@@ -243,12 +261,11 @@
     <script type="text/javascript">
 
         function checkboxToggle(id){
-            var currVal = document.getElementById(id).checked;
-            if(currVal ==false){
-                currVal= true;
-            } else {
-                currVal= false;
-            }
+             if (document.getElementById(id).checked ==true){
+                 document.getElementById(id).checked =false;
+             } else{
+                 document.getElementById(id).checked =true;
+             }
         }
 
 
@@ -422,16 +439,16 @@
     <div class="slider" id="page-browse">
         <ul class="nav nav-tabs">
             <li class="active">
-                <a data-toggle="tab" href="#store">Our Menu</a>
+                <a data-toggle="tab" href="#store" class="store-menu-tab">Our Menu</a>
             </li>
             <li>
-                <a data-toggle="tab" href="#user">User Created</a>
+                <a data-toggle="tab" href="#user" class="user-created-tab">User Created</a>
             </li>
         </ul>
 
         <div class="tab-content">
             <div id="store" class="tab-pane fade in active">
-                <div class="container-browse">
+                <div class="container-browse store-menu">
                     <div class="browse-pizza_half">
                         <img class="media-object" src="images/toppings-pizzas-buttons-logo/pepperonipizza.png"
                              alt="pepperoni pizza">
@@ -467,7 +484,7 @@
                              checkboxToggle('CrustCB');
                              checkboxToggle('PepperoniCB');
                              checkboxToggle('MozzarellaCB');
-                             checkboxToggle('Pizza Sauce')">
+                             checkboxToggle('PizzaSauceCB');">
                     </div>
                 </div>
 
@@ -490,8 +507,26 @@
                             <li>Cheese</li>
                         </ul>
                         <input type="image" alt=pizza-select-button" src="images/toppings-pizzas-buttons-logo/leaf-button.png"
-                        onclick="toggleTopping('Crust'); toggleTopping('Mushrooms'); toggleTopping('Tomatoes'); toggleTopping('Spinach'); toggleTopping('Red Peppers');
-                        toggleTopping('Green Pepper'); toggleTopping('Mozzarella'); toggleTopping('Olives');">
+                        onclick="
+                        toggleTopping('Crust');
+                        toggleTopping('Pizza Sauce');
+                        toggleTopping('Mushrooms');
+                        toggleTopping('Tomatoes');
+                        toggleTopping('Spinach');
+                        toggleTopping('Red Peppers');
+                        toggleTopping('Green Pepper');
+                        toggleTopping('Mozzarella');
+                        toggleTopping('Olives');
+
+                        checkboxToggle('CrustCB');
+                        checkboxToggle('PizzaSauceCB');
+                        checkboxToggle('MushroomsCB');
+                        checkboxToggle('TomatoesCB');
+                        checkboxToggle('SpinachCB');
+                        checkboxToggle('Red PeppersCB');
+                        checkboxToggle('Green PeppersCB');
+                        checkboxToggle('MozzarellaCB');
+                        checkboxToggle('OlivesCB');">
                                <!--onclick="selectButtonPress();">-->
 
 
@@ -515,7 +550,7 @@
 
         <!--START CUSTOM MENU CONTAINER-->
             <div id="user" class="tab-pane fade">
-                <div class="container-browse">
+                <div class="container-browse user-created-tab">
                     <div class="browse-pizza_half">
                         <img class="media-object" src="images/toppings-pizzas-buttons-logo/meatlover.png"
                              alt="meat lover pizza">
@@ -599,7 +634,6 @@
                 <a data-toggle="tab" href="#other">Other</a>
             </li>
         </ul>
-
         <div class="toppings_container">
             <div class="tab-content">
                 <div id="dough" class="topping tab-pane fade in active">
@@ -630,7 +664,7 @@
                          src="images/toppings-pizzas-buttons-logo/topping%20buttons/chicken-icon.png"
                          alt="chicken.png"/><br>
 
-                    <input type="checkbox" value="Bacon" onclick="toggleTopping('Bacon');">
+                    <input type="checkbox" id="BaconCB" value="Bacon" onclick="toggleTopping('Bacon');">
                     Bacon
                     <img class="topping-icon"
                          src="images/toppings-pizzas-buttons-logo/topping%20buttons/baconbits-icon.png"
@@ -639,42 +673,42 @@
                 </div>
                 <div id="other" class="topping tab-pane fade">
                     <h3>Choose your other toppings:</h3>
-                    <input type="checkbox" value="Mushrooms" onclick="toggleTopping('Mushrooms');"> Mushrooms
+                    <input type="checkbox" id="MushroomsCB" value="Mushrooms" onclick="toggleTopping('Mushrooms');"> Mushrooms
                     <img class="topping-icon"
                          src="images/toppings-pizzas-buttons-logo/topping%20buttons/mushroom-icon.png"
                          alt="mushroom.png"/><br>
 
-                    <input type="checkbox" value="Green Peppers" onclick="toggleTopping('Green Pepper');"> Green Peppers
+                    <input type="checkbox" id="Green PeppersCB" value="Green Peppers" onclick="toggleTopping('Green Pepper');"> Green Peppers
                     <img class="topping-icon"
                          src="images/toppings-pizzas-buttons-logo/topping%20buttons/pepper-icon.png"
                          alt="pepper.png"/><br>
 
-                    <input type="checkbox" value="Red Peppers" onclick="toggleTopping('Red Peppers');"> Red Peppers
+                    <input type="checkbox" id="Red PeppersCB" value="Red Peppers" onclick="toggleTopping('Red Peppers');"> Red Peppers
                     <img class="topping-icon"
                          src="images/toppings-pizzas-buttons-logo/topping%20buttons/redpepper-icon.png"
                          alt="red pepper.png"/><br>
 
-                    <input type="checkbox" value="Olives" onclick="toggleTopping('Olives');"> Olives
+                    <input type="checkbox" id="OlivesCB" value="Olives" onclick="toggleTopping('Olives');"> Olives
                     <img class="topping-icon"
                          src="images/toppings-pizzas-buttons-logo/topping%20buttons/olive-icon.png"
                          alt="olive.png"/><br>
 
-                    <input type="checkbox" value="Sashimi" onclick="toggleTopping('Sashimi');"> Sashimi
+                    <input type="checkbox" id="SashimiCB" value="Sashimi" onclick="toggleTopping('Sashimi');"> Sashimi
                     <img class="topping-icon"
                          src="images/toppings-pizzas-buttons-logo/topping%20buttons/sashimi-icon.png"
                          alt="sashimi.png"/><br>
 
-                    <input type="checkbox" value="Shrimp" onclick="toggleTopping('Shrimp');"> Shrimp
+                    <input type="checkbox" id="ShrimpCB" value="Shrimp" onclick="toggleTopping('Shrimp');"> Shrimp
                     <img class="topping-icon"
                          src="images/toppings-pizzas-buttons-logo/topping%20buttons/shrimp-icon.png"
                          alt="shrimp.png"/><br>
 
-                    <input type="checkbox" value="Tomatoes" onclick="toggleTopping('Tomatoes');"> Tomatoes
+                    <input type="checkbox" id="TomatoesCB" value="Tomatoes" onclick="toggleTopping('Tomatoes');"> Tomatoes
                     <img class="topping-icon"
                          src="images/toppings-pizzas-buttons-logo/topping%20buttons/tomato-icon.png"
                          alt="tomatoes.png"/><br>
 
-                    <input type="checkbox" value="Spinach" onclick="toggleTopping('Spinach');"> Spinach
+                    <input type="checkbox" id="SpinachCB" value="Spinach" onclick="toggleTopping('Spinach');"> Spinach
                     <img class="topping-icon"
                          src="images/toppings-pizzas-buttons-logo/topping%20buttons/spinach-icon.png"
                          alt="spinach.png"/><br>
