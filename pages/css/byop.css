@@ -237,13 +237,14 @@ button {
 
 .transaction-box {
     width: 34em;
-    margin-left: 35%;
-    margin-top: 5%;
+    margin-left: 25%;
     background: #ab2f2f;
     padding: 16px;
     overflow: hidden;
     text-align: right;
     color: white !important;
+    position: relative;
+    float: left;
 }
 
 .loginbox {
@@ -287,4 +288,9 @@ input {
 
 ul a {
    color: white;
+}
+
+#transaction-pizza-side {
+    position: relative;
+    float: left;
 }
