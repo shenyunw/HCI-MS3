@@ -131,7 +131,7 @@
         }
 
         .store-menu {
-            background-image: url(images/cuttingboard.png);
+            background-image: url(images/cuttingboard.png) !important;
             background-repeat: no-repeat;
         }
 
@@ -224,6 +224,7 @@
                 toggleTopping('Green Pepper');
                 toggleTopping('Mozzarella');
                 toggleTopping('Olives');
+                toggleTopping('Pizza Sauce')
             } else if (id == "veg-pizza") {
                 toggleTopping('Crust');
                 toggleTopping('Mushrooms');
@@ -461,10 +462,12 @@
                              toggleTopping('Crust');
                              toggleTopping('Pepperoni');
                              toggleTopping('Mozzarella');
+                             toggleTopping('Pizza Sauce');
 
                              checkboxToggle('CrustCB');
                              checkboxToggle('PepperoniCB');
-                             checkboxToggle('MozzarellaCB');">
+                             checkboxToggle('MozzarellaCB');
+                             checkboxToggle('Pizza Sauce')">
                     </div>
                 </div>
 
@@ -487,7 +490,10 @@
                             <li>Cheese</li>
                         </ul>
                         <input type="image" alt=pizza-select-button" src="images/toppings-pizzas-buttons-logo/leaf-button.png"
-                               onclick="selectButtonPress();">
+                        onclick="toggleTopping('Crust'); toggleTopping('Mushrooms'); toggleTopping('Tomatoes'); toggleTopping('Spinach'); toggleTopping('Red Peppers');
+                        toggleTopping('Green Pepper'); toggleTopping('Mozzarella'); toggleTopping('Olives');">
+                               <!--onclick="selectButtonPress();">-->
+
 
                         <fieldset class="starability-checkmark">
                             <legend>First rating:</legend>
@@ -597,9 +603,13 @@
         <div class="toppings_container">
             <div class="tab-content">
                 <div id="dough" class="topping tab-pane fade in active">
-                    <h3>Choose your dough:</h3>
+                    <h3>Choose your dough & sauces:</h3>
                     <input type="checkbox" id="CrustCB" value="Crust" onclick="toggleTopping('Crust');">
-                    Regular Crust
+                    Regular Crust<br>
+                    <input type="checkbox" id="PizzaSauceCB" value="Pizza Sauce" onclick="toggleTopping('Pizza Sauce');">
+                    Regular Sauce<br>
+                    <input type="checkbox" id="BBQSauceCB" value="Crust" onclick="toggleTopping('BBQSauce');">
+                    BBQ Sauce<br>
                 </div>
                 <div id="cheese" class="topping tab-pane fade">
                     <h3>Choose your cheese:</h3>
@@ -675,6 +685,10 @@
                 <div id="placeholder_pizza">
                     <img class="buildImage" id="Crust"
                          src="images/toppings-pizzas-buttons-logo/toppings/crust.png">
+                    <img class="buildImage" id="Pizza Sauce"
+                         src="images/toppings-pizzas-buttons-logo/toppings/pizza-sauce.png">
+                    <img class="buildImage" id="BBQSauce"
+                         src="images/toppings-pizzas-buttons-logo/toppings/bbqsauce.png">
                     <img class="buildImage" id="Cheddar"
                          src="images/toppings-pizzas-buttons-logo/toppings/cheddercheese.png">
                     <img class="buildImage" id="Mozzarella"
