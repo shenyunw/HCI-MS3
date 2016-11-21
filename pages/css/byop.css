@@ -270,3 +270,8 @@ a.user-created-tab {
     color: white;
     background-color:black;
 }
+
+.signup-text {
+    color: white;
+    font-size: 3em;
+}
