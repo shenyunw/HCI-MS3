@@ -57,6 +57,7 @@
         }
 
         .toppings_container {
+            width: 90%;
             display: flex;
             background: white;
         }
@@ -104,7 +105,8 @@
 
         .tab-content {
             display: flex;
-            width: 50%;
+            margin-left: 5%;
+            width: 40%;
         }
 
         .browse-pizza_half {
@@ -163,35 +165,41 @@
 
         /*TAB COLORS FOR BUILD PAGE*/
         #tab-dough{
-            background-color: sandybrown;
+            background-color: #ecb43c;
         }
 
         #dough{
-            background-color: sandybrown;
+            width: 300px;
+            background-color: white;
         }
 
         #tab-cheese{
-            background-color: yellow;
+            text-decoration-color: white;
+            background-color: #4c0404;
         }
 
         #cheese{
-            background-color: yellow;
+            width: 300px;
+
+            background-color: white;
         }
 
         #tab-meat{
-            background-color: darkred;
+            background-color: #ecb43c;
         }
 
         #meat{
-            background-color: darkred;
+            width: 300px;
+            background-color: white;
         }
 
         #tab-other{
-            background-color: purple;
+            background-color: #4c0404;
         }
 
         #other{
-            background-color: purple;
+            width: 300px;
+            background-color: white;
         }
 
         /*END TAB COLORS FOR BUILD PAGE*/
@@ -697,6 +705,7 @@
 
     <!--BUILD PAGE-->
     <div class="slider" id="page-build">
+        <div class="browse">
         <ul class="nav nav-tabs">
             <li class="active" id="tab-dough">
                 <a data-toggle="tab" href="#dough">Dough</a>
@@ -711,6 +720,7 @@
                 <a data-toggle="tab" href="#other">Other</a>
             </li>
         </ul>
+
         <div class="toppings_container">
             <div class="tab-content">
                 <div id="dough" class="topping tab-pane fade in active">
@@ -828,6 +838,7 @@
                          src="images/toppings-pizzas-buttons-logo/toppings/spinach.png">
                 </div>
             </div>
+        </div>
         </div>
 
     </div>
