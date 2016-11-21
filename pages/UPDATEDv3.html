@@ -426,7 +426,6 @@
                         </ul>
 
 
-
                     </div>
                     <div class="browse-select-button-third">
                         <input type="image" alt=pizza-select-button"
@@ -482,7 +481,7 @@
                 <div class="tab-content">
                     <div id="dough" class="topping tab-pane fade in active">
                         <h3>Choose your sauces:</h3>
-                        <input  type="checkbox" id="Pizza SauceCB" value="Pizza Sauce"
+                        <input type="checkbox" id="Pizza SauceCB" value="Pizza Sauce"
                                onclick="toggleTopping('Pizza Sauce'); toggleTopping('Pizza SauceT')">
                         Regular Sauce<br>
                         <input type="checkbox" id="BBQSauceCB" value="BBQSauce" onclick="toggleTopping('BBQSauce');">
@@ -647,12 +646,12 @@
 
         <div class="loginbox">
             <p align="center"><span class="signup-text">Employee Login</span></p><br>
-            <span style="color: black; ">
-                    <label>Username</label>
-                    <input type="text" placeholder="Enter Username" name="uname"><br><br>
-                    <label>Password</label>
-                    <input type="password" placeholder="Enter Password" name="psw"><br><br>
-                </span>
+            <span>
+            <label>Username</label>
+            <input type="text" placeholder="Enter Username" name="uname"><br><br>
+            <label>Password</label>
+            <input type="password" placeholder="Enter Password" name="psw"><br><br>
+            </span>
             <div class="button1">
                 <button onclick="$('#site-body').slick('slickGoTo', 7); return true;" type="submit">Login</button>
             </div>
@@ -662,22 +661,22 @@
     <!--TRANSACTION PAGE-->
     <div class="slider" id="page-transaction">
 
-            <div class="transaction-box">
-                <p>Checkout Details</p><br>
-                <label>First Name</label>
-                <input type="text" placeholder="First Name" name="fName" required><br><br>
-                <label>Last Name</label>
-                <input type="text" placeholder="Last Name" name="lName" required><br><br>
-                <label>Address</label>
-                <input type="text" placeholder="Address" name="addr" required><br><br>
-                <label>Callback Phone</label>
+        <div class="transaction-box">
+            <p>Checkout Details</p><br>
+            <label>First Name</label>
+            <input type="text" placeholder="First Name" name="fName" required><br><br>
+            <label>Last Name</label>
+            <input type="text" placeholder="Last Name" name="lName" required><br><br>
+            <label>Address</label>
+            <input type="text" placeholder="Address" name="addr" required><br><br>
+            <label>Callback Phone</label>
 
-                <input type="text" placeholder="Phone number" name="phone" required><br><br>
-                <div class="button1">
-                    <button type="submit">Place Order</button>
-                </div>
-
+            <input type="text" placeholder="Phone number" name="phone" required><br><br>
+            <div class="button1">
+                <button type="submit">Place Order</button>
             </div>
+
+        </div>
 
         <div id="transaction-pizza-side" style="position: relative;">
             <img class="pizza_side-background" src="images/cuttingboard.png" alt="Cuttingboard">

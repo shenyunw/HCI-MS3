@@ -272,6 +272,13 @@ a.user-created-tab {
 }
 
 .signup-text {
-    color: white;
     font-size: 3em;
+    color: white;
+}
+.signtext {
+    color: white;
+}
+
+input {
+    color: black;
 }
