@@ -128,11 +128,6 @@ img.pizza_side-background {
     color: white;
 }
 
-.user-created-tab {
-    background-color: black;
-    color: white;
-}
-
 .browse {
     margin-right: 60%;
 }
@@ -268,4 +263,9 @@ button {
     /* margin-top: 5%; */
     overflow: hidden;
     text-align: right;
+}
+
+a.user-created-tab {
+    color: white;
+    background-color:black;
 }
