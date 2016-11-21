@@ -147,7 +147,7 @@ img.pizza_side-background {
 
 /*TAB COLORS FOR BUILD PAGE*/
 #tab-dough {
-    background-color: #ecb43c;
+    background-color: #4cae4c;
 }
 
 #dough {
@@ -158,7 +158,7 @@ img.pizza_side-background {
 
 #tab-cheese {
     text-decoration-color: white;
-    background-color: #4c0404;
+    background-color: black;
 }
 
 #cheese {
@@ -168,7 +168,7 @@ img.pizza_side-background {
 }
 
 #tab-meat {
-    background-color: #ecb43c;
+    background-color: #4cae4c;
 }
 
 #meat {
@@ -178,7 +178,7 @@ img.pizza_side-background {
 }
 
 #tab-other {
-    background-color: #4c0404;
+    background-color: black;
 }
 
 #other {
