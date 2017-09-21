@@ -1,0 +1,296 @@
+
+
+body {
+    background-image: url("../images/background.jpg");
+}
+
+#workplace {
+    display: flex;
+}
+
+#toppings_side {
+    width: 100%;
+    background: white;
+}
+
+.topping-icon {
+    display: inline !important;
+    max-height: 1em;
+}
+
+.toppings_tab {
+    width: 25%;
+    border-style: solid;
+}
+
+.toppings_container {
+    display: flex;
+    background: white;
+}
+
+.build {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+/*#pizza-topping-tabs, .nav-tabs {*/
+/*background-color: white !important;*/
+/*color: black;*/
+/*}*/
+.pizza-orders{
+    margin-left:20%;
+    margin-bottom:2%;
+}
+
+.navbar-brand > img {
+    max-width: 5%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.navbar-inverse {
+    background-color: #080606;
+}
+
+.navbar-nav {
+    padding-left: 8%;
+}
+
+#navbar-container {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: white;
+    font-size: 3em;
+}
+
+.container-browse {
+    margin-left: 36%;
+    width: 121%;
+    display: flex;
+    background-image: url(../images/cuttingboard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container-browse img {
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.tab-content {
+    display: flex;
+}
+
+.browse-pizza_half {
+ }
+
+.browse-pizza_description_half {
+    margin-top: 2em;
+    margin-right: 3em;
+    width: 22%;
+    float: left;
+}
+
+.browse-select-button-third {
+    padding-top: 11%;
+}
+
+#pizza_side {
+    height: 100%;
+    float: left;
+}
+
+#pizza_complete_side {
+    float: left;
+}
+
+.placeholder_pizza {
+    border-radius: 50px;
+    z-index: 1;
+    position: absolute;
+    top: 3em;
+}
+
+.buildImage {
+    position: absolute;
+    visibility: hidden;
+}
+
+img.pizza_side-background {
+    height: 321px;
+    width: 328px;
+}
+
+.store-menu {
+    background-image: url(../images/cuttingboard.png) !important;
+    background-repeat: no-repeat;
+}
+
+.store-menu-tab {
+    background-color: #4cae4c;
+    color: white;
+}
+
+.browse {
+    margin-left: 22%;
+}
+
+
+
+.buildtab {
+    padding-left: 0%;
+}
+
+/*TAB COLORS FOR BUILD PAGE*/
+#tab-dough {
+    background-color: #4cae4c;
+}
+
+#dough {
+    padding-left: 5%;
+    width: 300px;
+    background-color: white;
+}
+
+#tab-cheese {
+    text-decoration-color: white;
+    background-color: black;
+}
+
+#cheese {
+    width: 300px;
+    padding-left: 5%;
+    background-color: white;
+}
+
+#tab-meat {
+    background-color: #4cae4c;
+}
+
+#meat {
+    padding-left: 5%;
+    width: 300px;
+    background-color: white;
+}
+
+#tab-other {
+    background-color: black;
+}
+
+#other {
+    padding-left: 5%;
+    width: 300px;
+    background-color: white;
+}
+
+.checkoutbutton img {
+    margin-top: 80%;
+    width: 80%;
+}
+
+/*END TAB COLORS FOR BUILD PAGE*/
+
+/*span#placeholder_text {*/
+/*margin-top: 25%;*/
+/*font-size: 2em;*/
+/*position: relative;*/
+/*display: inline-block;*/
+/*}*/
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 60%;
+    margin: auto;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+
+}
+
+.button1 {
+    text-align: center;
+}
+
+.signtext {
+    margin-right: 10%;
+}
+
+.contact-info {
+    text-align: center;
+    font-size: 0.5em;
+    color: white;
+    background-color: #080606;
+    position: absolute;
+    top: 0;
+    /* left: 25%; */
+    /* right: 25%; */
+    width: 100%;
+    border-bottom-color: #080808;
+}
+
+.transaction-box {
+    width: 34em;
+    margin-left: 25%;
+    background: #ab2f2f;
+    padding: 16px;
+    overflow: hidden;
+    text-align: right;
+    color: white !important;
+    position: relative;
+    float: left;
+}
+
+.loginbox {
+    width: 35em;
+    margin-left: 33%;
+    margin-top: 5%;
+    background: #ab2f2f;
+    padding: 16px;
+    overflow: hidden;
+    text-align: center;
+    color: white !important;
+}
+
+.signupbox {
+    background: #ab2f2f;
+    width: 35em;
+    padding: 2em;
+    margin-left: 33%;
+    margin-bottom: 10%;
+    /* margin-top: 5%; */
+    overflow: hidden;
+    text-align: right;
+}
+
+a.user-created-tab {
+    color: white;
+    background-color:black;
+}
+
+.signup-text {
+    font-size: 3em;
+    color: white;
+}
+.signtext {
+    color: white;
+}
+
+input {
+    color: black;
+}
+
+ul a {
+   color: white;
+}
+
+#transaction-pizza-side {
+    position: relative;
+    float: left;
+}
